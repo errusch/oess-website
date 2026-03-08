@@ -3,54 +3,54 @@ import { useState } from "react";
 
 const faqs = [
   {
-    q: "What is OESS?",
-    a: "OESS (OpenClaw Executive Setup Service) is a done-for-you AI operations setup. We install and configure OpenClaw on hardware you own, connect it to your email, calendar, and tools, and set up AI agents to handle the daily administrative work that eats your time. You get the result — an automated ops layer — without the months it would take to build it yourself.",
+    q: "What are you actually selling?",
+    a: "A managed AI chief-of-staff deployment. The machine, the setup, the workflow design, and the support are bundled into one service instead of being sold as separate pieces you have to coordinate yourself.",
   },
   {
     q: "How is it different from ChatGPT?",
-    a: "ChatGPT is a conversation tool. You open it, ask it something, and it responds. OESS is infrastructure. The agents run continuously in the background, watching your inbox, managing your calendar, queuing research tasks overnight, and handling workflows without you prompting them. It's the difference between a smart assistant you have to wake up versus one that's already done the work when you sit down.",
+    a: "ChatGPT is something you open and talk to. OESS is something that stays embedded in the workflow. The goal is not better chatting. The goal is less founder drag.",
   },
   {
     q: "What does setup look like?",
-    a: "It starts with a discovery call — usually 45 minutes. We map your current tools, email volume, calendar patterns, and biggest time drains. Then we configure OpenClaw on your hardware (or ship you a Mac Mini if you're on Executive tier or above), connect your accounts, test the agent workflows, and run a trial overnight batch. Most clients are fully operational within one business day of hardware access.",
+    a: "We map the workflow first, then wire the system around the highest-friction tasks. Hardware, deployment, and support are part of the service from the start. The first useful output should show up fast, not after months of implementation.",
   },
   {
     q: "Can I use my own AI models?",
-    a: "Yes. OESS uses your own API keys for Anthropic, OpenAI, Google, or whatever models you want to run. The agents route tasks to the appropriate model based on what the task requires. You control the model mix. Your usage costs go directly to the model providers — OESS does not mark up API costs.",
+    a: "Yes. The system is designed around owner-controlled accounts and model access. The point is to keep the setup private and under your control, not to force you through a proprietary OESS model layer.",
   },
   {
     q: "Is my data safe?",
-    a: "All agents run on your hardware at your location. Your email, calendar data, and documents are processed locally and are never sent to an OESS server. Credentials are stored in a 1Password vault. All API calls use TLS 1.2+. Your data is not used to train any AI model. See the Security page for full technical details.",
+    a: "Safer than a normal SaaS workflow, yes. The stronger claim is architectural: the system lives on your side. The honest caveat is that support and troubleshooting are still trust relationships, not magic privacy theater.",
   },
   {
     q: "What if I want to cancel?",
-    a: "Cancel anytime with 30 days notice. There's no long-term contract and no cancellation fee. The hardware is yours. The OpenClaw installation stays on your machine — you're not locked into OESS to keep it running. We'll provide documentation so you can manage it yourself if you prefer.",
+    a: "The exact offboarding path depends on the tier and whether hardware is leased, but the goal is straightforward: clear terms, no fake lock-in, and no surprise dependency on hidden OESS infrastructure.",
   },
   {
     q: "Do I need technical skills?",
-    a: "No. That's the point. You need to be able to follow a checklist to share account access, and you need to be comfortable with the idea that software is running on your machine. The actual configuration — the complex parts — is what OESS handles. Day-to-day, you interact with your agents through Telegram or email like you would any assistant.",
+    a: "No. You need enough operational maturity to explain your workflow clearly. The technical setup is the part OESS is meant to absorb for you.",
   },
   {
     q: "How quickly does it start working?",
-    a: "The first useful output typically comes on the morning after setup — your morning briefing, inbox triage, and calendar prep for the day. Full automation builds over the first week as the agents learn your preferences and patterns. Most clients recover 10+ hours in week one and continue improving from there.",
+    a: "The first useful output should land quickly. The initial target is usually morning briefing, inbox triage, and meeting prep, because those are the fastest routes to visible relief.",
   },
 ];
 
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div style={{ borderBottom: "1px solid #1a1a1a" }}>
+    <div style={{ borderTop: "1px solid rgba(255,241,219,0.08)" }}>
       <button
         onClick={() => setOpen(!open)}
         style={{
           width: "100%", textAlign: "left", background: "none", border: "none", cursor: "pointer",
           padding: "24px 0", display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 16,
         }}>
-        <span style={{ fontSize: 16, fontWeight: 600, color: "#ededed", lineHeight: 1.4 }}>{q}</span>
-        <span style={{ color: "#c9a84c", fontSize: 20, flexShrink: 0, marginTop: -2 }}>{open ? "−" : "+"}</span>
+        <span style={{ fontSize: 18, lineHeight: 1.45 }}>{q}</span>
+        <span style={{ color: "var(--accent)", fontSize: 20, flexShrink: 0, marginTop: -2, fontWeight: 700 }}>{open ? "−" : "+"}</span>
       </button>
       {open && (
-        <div style={{ paddingBottom: 24, fontSize: 15, color: "#777", lineHeight: 1.8 }}>
+        <div style={{ paddingBottom: 24, fontSize: 16, color: "var(--muted)", lineHeight: 1.85 }}>
           {a}
         </div>
       )}
@@ -60,18 +60,19 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export default function FAQ() {
   return (
-    <div style={{ maxWidth: 760, margin: "0 auto", padding: "80px 24px" }}>
-      <div style={{ marginBottom: 56 }}>
-        <div style={{ fontSize: 11, fontWeight: 600, color: "#c9a84c", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 16 }}>FAQ</div>
-        <h1 style={{ fontSize: "clamp(32px, 5vw, 56px)", fontWeight: 800, letterSpacing: "-0.03em", margin: "0 0 16px" }}>
-          Common questions.
+    <div style={{ maxWidth: 860, margin: "0 auto", padding: "82px 24px 100px" }}>
+      <div style={{ maxWidth: 720, marginBottom: 34 }}>
+        <div style={{ fontSize: 12, fontWeight: 700, color: "var(--accent)", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 16 }}>FAQ</div>
+        <h1 style={{ fontSize: "clamp(42px, 6vw, 70px)", lineHeight: 0.98, letterSpacing: "-0.04em", margin: "0 0 16px" }}>
+          The common questions, answered plainly.
         </h1>
-        <p style={{ color: "#666", fontSize: 17 }}>
-          If yours isn&apos;t here, email <a href="mailto:errusch@gmail.com" style={{ color: "#c9a84c" }}>errusch@gmail.com</a>.
+        <p style={{ color: "var(--muted)", fontSize: 19, lineHeight: 1.8, margin: 0 }}>
+          If your question is not here, email me directly and I will give you a
+          real answer instead of a canned sales response.
         </p>
       </div>
 
-      <div style={{ border: "1px solid #1f1f1f", borderRadius: 12, padding: "0 24px" }}>
+      <div style={{ border: "1px solid var(--border)", background: "rgba(255,248,236,0.03)", borderRadius: 28, padding: "0 26px" }}>
         {faqs.map(f => (
           <FAQItem key={f.q} q={f.q} a={f.a} />
         ))}

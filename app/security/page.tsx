@@ -1,85 +1,79 @@
 "use client";
 export default function Security() {
   return (
-    <div style={{ maxWidth: 900, margin: "0 auto", padding: "80px 24px" }}>
-      <div style={{ marginBottom: 56 }}>
-        <div style={{ fontSize: 11, fontWeight: 600, color: "#c9a84c", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 16 }}>Security</div>
-        <h1 style={{ fontSize: "clamp(32px, 5vw, 56px)", fontWeight: 800, letterSpacing: "-0.03em", lineHeight: 1.1, margin: "0 0 20px" }}>
-          Your data stays on your hardware.
+    <div style={{ maxWidth: 980, margin: "0 auto", padding: "82px 24px 100px" }}>
+      <div style={{ maxWidth: 760, marginBottom: 40 }}>
+        <div style={{ fontSize: 12, fontWeight: 700, color: "var(--accent)", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 16 }}>Security</div>
+        <h1 style={{ fontSize: "clamp(42px, 6vw, 70px)", lineHeight: 0.98, letterSpacing: "-0.04em", margin: "0 0 16px" }}>
+          Your business should not have to trust my cloud.
         </h1>
-        <p style={{ fontSize: 18, color: "#777", lineHeight: 1.6, maxWidth: 600 }}>
-          OESS runs on equipment you own, at your location. There is no central server. No cloud database. No vendor holding your business data.
+        <p style={{ fontSize: 20, color: "var(--muted)", lineHeight: 1.8, maxWidth: 700, margin: 0 }}>
+          The point of OESS is architectural simplicity: the system lives on your
+          side, on a dedicated machine in your environment, around your accounts.
         </p>
       </div>
 
-      {/* Key principles */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 20, marginBottom: 64 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 18, marginBottom: 38 }}>
         {[
-          { icon: "🔒", title: "On-premise only", body: "All agents run on your Mac. Data is processed locally. Nothing is sent to a central OESS server." },
-          { icon: "🔐", title: "AES-256 encryption", body: "Data at rest is encrypted with AES-256. All remote connections use TLS 1.2 or higher. No exceptions." },
-          { icon: "🚫", title: "No AI training on your data", body: "Your emails, meetings, and documents are never used to train AI models. That data is yours, period." },
-          { icon: "🗝️", title: "1Password credential vaults", body: "Every credential is stored in a 1Password vault — not in plaintext config files or environment variables." },
+          { title: "Runs in your environment", body: "OESS is deployed on a dedicated machine on your side instead of routing your business through a vendor-hosted app." },
+          { title: "Your accounts stay yours", body: "The setup is designed around your model accounts and integrations, not a proprietary OESS-hosted control plane." },
+          { title: "Support is explicit", body: "If support or troubleshooting requires access, that is a support event, not a hidden background dependency." },
+          { title: "No inflated claims", body: "I am not going to sell you fake zero-trust language. The honest claim is simpler: the system is designed to live on your side." },
         ].map(item => (
-          <div key={item.title} style={{ background: "#111111", border: "1px solid #1f1f1f", borderRadius: 12, padding: 28 }}>
-            <div style={{ fontSize: 28, marginBottom: 16 }}>{item.icon}</div>
-            <h3 style={{ fontSize: 16, fontWeight: 700, marginBottom: 10 }}>{item.title}</h3>
-            <p style={{ fontSize: 13, color: "#666", lineHeight: 1.7 }}>{item.body}</p>
+          <div key={item.title} style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: 24, padding: 24 }}>
+            <h3 style={{ fontSize: 28, lineHeight: 1.04, letterSpacing: "-0.03em", margin: "0 0 10px" }}>{item.title}</h3>
+            <p style={{ fontSize: 15, color: "var(--muted)", lineHeight: 1.8, margin: 0 }}>{item.body}</p>
           </div>
         ))}
       </div>
 
-      {/* Technical details */}
-      <div style={{ marginBottom: 48 }}>
-        <h2 style={{ fontSize: 28, fontWeight: 700, letterSpacing: "-0.02em", marginBottom: 32 }}>Technical specifics</h2>
-        <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #1f1f1f", borderRadius: 12, overflow: "hidden" }}>
-          {[
-            ["Encryption in transit", "TLS 1.2 minimum for all API calls. TLS 1.3 preferred where supported."],
-            ["Encryption at rest", "AES-256 for stored credentials, cached data, and local knowledge bases."],
-            ["Credential storage", "1Password CLI integration. No credentials in code, config files, or logs."],
-            ["Node monitoring", "OpenClaw node pairing for real-time status monitoring and health checks."],
-            ["Access control", "Owner-only operations require explicit approval. Audit log captures all security-relevant events."],
-            ["AI model privacy", "All AI API calls are made with your own API keys. OESS never proxies your model requests."],
-          ].map(([label, detail], i) => (
-            <div key={label} style={{
-              display: "flex", gap: 24, padding: "20px 24px",
-              borderTop: i > 0 ? "1px solid #1a1a1a" : "none",
-              flexWrap: "wrap",
-            }}>
-              <div style={{ fontSize: 13, fontWeight: 600, color: "#ededed", minWidth: 200, flexShrink: 0 }}>{label}</div>
-              <div style={{ fontSize: 13, color: "#666", flex: 1, lineHeight: 1.6 }}>{detail}</div>
-            </div>
-          ))}
+      <div style={{ border: "1px solid var(--border)", background: "rgba(255,248,236,0.03)", borderRadius: 28, padding: 28, marginBottom: 34 }}>
+        <div style={{ fontSize: 12, fontWeight: 700, color: "var(--accent)", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 14 }}>What I tell clients directly</div>
+        <div style={{ color: "var(--muted)", fontSize: 17, lineHeight: 1.9 }}>
+          <p style={{ marginTop: 0 }}>
+            OESS is more private than a normal SaaS workflow because the system is
+            deployed on your side. That matters.
+          </p>
+          <p>
+            It is not “zero trust magic.” If I am supporting or troubleshooting
+            your deployment, that is still a trust relationship with scoped access.
+            I think that is the honest way to describe it.
+          </p>
+          <p style={{ marginBottom: 0 }}>
+            If you want the strongest privacy posture, the answer is tighter
+            operational discipline, fewer unnecessary integrations, and a system
+            boundary you actually understand.
+          </p>
         </div>
       </div>
 
-      {/* Incident response */}
-      <div style={{ marginBottom: 48 }}>
-        <h2 style={{ fontSize: 28, fontWeight: 700, letterSpacing: "-0.02em", marginBottom: 20 }}>Incident response</h2>
-        <p style={{ color: "#666", fontSize: 15, marginBottom: 32, lineHeight: 1.6 }}>
-          If a security issue is identified — on our end or yours — this is the process:
-        </p>
-        <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-          {[
-            { step: "1. Contain", body: "Isolate the affected system or account. Revoke active credentials if necessary. Stop the bleeding first." },
-            { step: "2. Assess", body: "Determine scope: what was accessed, what was exposed, what the attack vector was." },
-            { step: "3. Notify", body: "Contact the client within 2 hours of confirmed incident. No waiting until everything is resolved." },
-            { step: "4. Fix", body: "Patch the vulnerability, rotate credentials, harden the configuration." },
-            { step: "5. Document", body: "Write up what happened, how it was resolved, and what changed to prevent recurrence." },
-          ].map(({ step, body }) => (
-            <div key={step} style={{ display: "flex", gap: 20, padding: "20px 24px", background: "#111111", border: "1px solid #1f1f1f", borderRadius: 10, alignItems: "flex-start" }}>
-              <div style={{ fontSize: 12, fontWeight: 700, color: "#c9a84c", minWidth: 80, flexShrink: 0, paddingTop: 2 }}>{step}</div>
-              <div style={{ fontSize: 14, color: "#888", lineHeight: 1.6 }}>{body}</div>
-            </div>
-          ))}
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }} className="security-grid">
+        <div style={{ padding: 24, background: "var(--surface)", border: "1px solid var(--border)", borderRadius: 24 }}>
+          <div style={{ fontSize: 12, fontWeight: 700, color: "var(--accent)", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 12 }}>Security baseline</div>
+          <div style={{ color: "var(--muted)", lineHeight: 1.8, fontSize: 15 }}>
+            <p style={{ marginTop: 0 }}>Private deployment in your environment</p>
+            <p>Owner-controlled model and integration accounts</p>
+            <p>Scoped support and maintenance access</p>
+            <p style={{ marginBottom: 0 }}>No OESS-hosted business-data platform</p>
+          </div>
+        </div>
+        <div style={{ padding: 24, background: "var(--surface)", border: "1px solid var(--border)", borderRadius: 24 }}>
+          <div style={{ fontSize: 12, fontWeight: 700, color: "var(--accent)", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 12 }}>Questions</div>
+          <p style={{ fontSize: 15, color: "var(--muted)", margin: 0, lineHeight: 1.8 }}>
+            If you need a more technical security conversation before buying,
+            email <a href="mailto:errusch@gmail.com" style={{ color: "var(--accent)" }}>errusch@gmail.com</a>.
+            I would rather answer the real concern than hide it behind generic trust copy.
+          </p>
         </div>
       </div>
 
-      <div style={{ padding: "28px 32px", background: "#111111", border: "1px solid #1f1f1f", borderRadius: 12 }}>
-        <h3 style={{ fontSize: 18, fontWeight: 700, marginBottom: 10 }}>Questions about security?</h3>
-        <p style={{ fontSize: 14, color: "#666", marginBottom: 0, lineHeight: 1.6 }}>
-          Email <a href="mailto:errusch@gmail.com" style={{ color: "#c9a84c" }}>errusch@gmail.com</a> directly. Security questions get a response within 24 hours.
-        </p>
-      </div>
+      <style>{`
+        @media (max-width: 760px) {
+          .security-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }

@@ -1,11 +1,24 @@
 import type { Metadata } from "next";
+import { DM_Sans, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
+const dmSans = DM_Sans({
+  variable: "--font-sans",
+  subsets: ["latin"],
+});
+
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-serif",
+  subsets: ["latin"],
+  weight: "400",
+});
+
 export const metadata: Metadata = {
-  title: "OESS – OpenClaw Executive Setup Service",
-  description: "Get 40 hours back every week. OESS wires OpenClaw into your daily operations. AI agents handle email, calendar, research, and workflows.",
+  title: "OESS - AI Chief of Staff, Installed for Founders",
+  description:
+    "OESS deploys a private AI chief of staff with hardware included in your environment. Email triage, meeting prep, research, and follow-through for founder-led teams.",
 };
 
 export default function RootLayout({
@@ -15,7 +28,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body style={{ background: "#0a0a0a", color: "#ededed", margin: 0 }}>
+      <body
+        className={`${dmSans.variable} ${instrumentSerif.variable}`}
+        style={{ background: "#0f0d0a", color: "#f4efe6", margin: 0 }}
+      >
         <Nav />
         <main>{children}</main>
         <Footer />

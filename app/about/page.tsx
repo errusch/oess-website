@@ -3,66 +3,79 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <div style={{ maxWidth: 760, margin: "0 auto", padding: "80px 24px" }}>
-      <div style={{ marginBottom: 48 }}>
-        <div style={{ fontSize: 11, fontWeight: 600, color: "#c9a84c", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 16 }}>About OESS</div>
-        <h1 style={{ fontSize: "clamp(32px, 5vw, 56px)", fontWeight: 800, letterSpacing: "-0.03em", lineHeight: 1.1, margin: "0 0 24px" }}>
-          Built for myself first.
+    <div style={{ maxWidth: 860, margin: "0 auto", padding: "82px 24px 100px" }}>
+      <div style={{ marginBottom: 42, maxWidth: 760 }}>
+        <div style={{ fontSize: 12, fontWeight: 700, color: "var(--accent)", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 16 }}>About OESS</div>
+        <h1 style={{ fontSize: "clamp(44px, 6vw, 72px)", lineHeight: 0.98, letterSpacing: "-0.04em", margin: "0 0 18px" }}>
+          I built this because I got tired of doing founder work badly.
         </h1>
-        <p style={{ fontSize: 20, color: "#888", lineHeight: 1.6 }}>
-          Then I realized every founder I know has the same problem.
+        <p style={{ fontSize: 20, color: "var(--muted)", lineHeight: 1.8, margin: 0, maxWidth: 700 }}>
+          Not strategy. Not product. Not sales. The constant drag underneath all
+          of it: email, scheduling, follow-up, prep, reminders, and the mental
+          overhead of keeping too much in my head.
         </p>
       </div>
 
-      <div style={{ fontSize: 17, lineHeight: 1.8, color: "#c0c0c0" }}>
-        <p>I was spending three hours a day on email, calendar, and admin.</p>
+      <div style={{ fontSize: 18, lineHeight: 1.95, color: "var(--muted)", marginBottom: 40 }}>
+        <p>I started in IT and spent the next 15+ years moving deeper into systems, process improvement, rollout work, and business operations. So when that problem got annoying enough, I stopped pretending I would eventually get more organized and built a system instead.</p>
 
-        <p>Not responding to hard things — just processing. Reading and deciding what to do with routine stuff. Booking meetings. Triaging notifications. Following up on threads that had been sitting for a week. The kind of work that feels necessary but produces nothing.</p>
+        <p>That system now reads my inbox before I do, prepares me for meetings, pulls research when I flag something, and keeps work moving in the background while I&apos;m offline. It is not magic. It is just useful in the exact places where most founders quietly lose time every day.</p>
 
-        <p>I&apos;m a developer. I had been watching AI tooling get genuinely capable. So I did what any engineer does when something annoys them: I built a system to fix it.</p>
+        <p>Once I started using it, the reaction from other operators was always the same: <em>How do I get that without spending six months building it?</em></p>
 
-        <p>OpenClaw runs on a Mac Mini in my office. It reads my email before I wake up. It drafts replies, flags the two things that actually need my attention, and archives the rest. It manages my calendar, preps for meetings, and runs overnight research batches on things I flagged during the day. By the time I sit down with coffee, most of the day is already set up.</p>
+        <p>OESS is the answer to that question. I take the system I built for myself, adapt it to your workflow, deploy it with hardware included in your environment, and get it running fast enough to matter.</p>
 
-        <p>I started talking about it with other founders and got the same reaction every time: <em>"How do I get that?"</em></p>
+        <p>This is not a SaaS company pretending to be hands-on. It is a founder-run managed deployment for people who would rather buy back focus than become part-time AI infrastructure hobbyists.</p>
 
-        <p>OESS is the answer to that question. I take the system I built for myself, configure it for your specific operation, and set it running on your hardware. It stays on your machine. Your data doesn&apos;t leave your network. You get the same setup I use, minus the six months I spent building it.</p>
-
-        <p>This is not a SaaS product. There is no dashboard to log into. There is no team of account managers. There is a system that runs, and a direct line to me when something needs adjustment.</p>
-
-        <p style={{ color: "#ededed", fontWeight: 600 }}>
-          If you&apos;re spending hours a day on things that feel like work but aren&apos;t really your work, that&apos;s the problem OESS solves.
-        </p>
+        <p>The reason I think this works is that I do not come at the problem from one side only. I have worked in network support, enterprise software support, process leadership, automation initiatives, consulting, and operations. I understand the technical buildout, but I also understand the operational reality of overloaded teams, broken follow-through, and work that keeps rolling uphill back to the executive.</p>
       </div>
 
-      <div style={{ marginTop: 56, display: "flex", alignItems: "center", gap: 20, padding: 28, background: "#111111", border: "1px solid #1f1f1f", borderRadius: 12 }}>
-        <div style={{ width: 56, height: 56, borderRadius: "50%", background: "#c9a84c", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, fontSize: 22, fontWeight: 800, color: "#0a0a0a" }}>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 40 }} className="about-grid">
+        {[
+          ["What I believe", "Founders should spend their best hours on decisions, leverage, and movement. Not inbox cleanup."],
+          ["What OESS is", "A private AI operating layer installed around your real workflow, with hardware and support wrapped into the offer."],
+          ["What OESS is not", "Not a generic chatbot. Not a dashboard product. Not a magic autonomy promise."],
+          ["Why trust me with it", "Because I have spent years translating business requirements into technical execution, stabilizing rollouts, reducing manual work, and improving how teams actually operate."],
+        ].map(([title, copy]) => (
+          <div key={title} style={{ border: "1px solid var(--border)", background: "var(--surface)", borderRadius: 24, padding: 24 }}>
+            <h2 style={{ fontSize: 28, lineHeight: 1.02, letterSpacing: "-0.03em", margin: "0 0 10px" }}>{title}</h2>
+            <p style={{ margin: 0, color: "var(--muted)", lineHeight: 1.8, fontSize: 15 }}>{copy}</p>
+          </div>
+        ))}
+      </div>
+
+      <div style={{ marginTop: 0, display: "flex", alignItems: "center", gap: 20, padding: 28, background: "rgba(255,248,236,0.03)", border: "1px solid var(--border)", borderRadius: 28, marginBottom: 40 }}>
+        <div style={{ width: 64, height: 64, borderRadius: "50%", background: "var(--accent)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, fontSize: 24, fontWeight: 800, color: "#16110b" }}>
           ER
         </div>
         <div>
-          <div style={{ fontWeight: 700, fontSize: 16 }}>Eric Rusch</div>
-          <div style={{ fontSize: 13, color: "#666", marginTop: 2 }}>Founder, OESS &amp; OpenClaw</div>
+          <div style={{ fontWeight: 700, fontSize: 20 }}>Eric Rusch</div>
+          <div style={{ fontSize: 15, color: "var(--muted)", marginTop: 2 }}>Founder, OESS. 15+ years across IT, systems, process improvement, and business operations.</div>
         </div>
       </div>
 
-      <div style={{ marginTop: 48, display: "flex", gap: 16, flexWrap: "wrap" }}>
+      <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
         <Link href="/pricing" style={{
-          background: "#c9a84c", color: "#0a0a0a", padding: "13px 28px", borderRadius: 8,
-          fontWeight: 700, fontSize: 15, display: "inline-block", transition: "background 0.15s",
-        }}
-          onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#e0c068")}
-          onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c9a84c")}>
+          background: "var(--accent)", color: "#16110b", padding: "15px 24px", borderRadius: 999,
+          fontWeight: 700, fontSize: 15, display: "inline-block",
+        }}>
           View pricing
         </Link>
         <Link href="/contact" style={{
-          background: "transparent", border: "1px solid #2a2a2a", color: "#ededed",
-          padding: "13px 28px", borderRadius: 8, fontWeight: 600, fontSize: 15, display: "inline-block",
-          transition: "border-color 0.15s",
-        }}
-          onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.borderColor = "#c9a84c")}
-          onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.borderColor = "#2a2a2a")}>
-          Get in touch
+          background: "rgba(255,248,236,0.03)", border: "1px solid var(--border)", color: "var(--foreground)",
+          padding: "15px 24px", borderRadius: 999, fontWeight: 600, fontSize: 15, display: "inline-block",
+        }}>
+          Talk to Eric
         </Link>
       </div>
+
+      <style>{`
+        @media (max-width: 760px) {
+          .about-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }
