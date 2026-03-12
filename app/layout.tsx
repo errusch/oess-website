@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Instrument_Serif } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -7,12 +7,6 @@ import Footer from "@/components/Footer";
 const dmSans = DM_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
-});
-
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-serif",
-  subsets: ["latin"],
-  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -29,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dmSans.variable} ${instrumentSerif.variable}`}
+        className={`${dmSans.variable}`}
         style={{ background: "#0f0d0a", color: "#f4efe6", margin: 0 }}
       >
         <Nav />

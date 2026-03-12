@@ -10,7 +10,7 @@ export default function Footer() {
             <span style={{ color: "var(--accent)" }}>OESS</span>
           </div>
           <p style={{ fontSize: 13, color: "var(--muted-2)", maxWidth: 320, lineHeight: 1.7 }}>
-            Private AI chief of staff systems for founder-led teams. Hardware included. Tuned to your workflow.
+            Private executive operating systems for founder-led companies. Daily briefings, meeting prep, follow-up coverage, and overnight execution — managed for you.
           </p>
         </div>
         <div style={{ display: "flex", gap: 48, flexWrap: "wrap" }}>
@@ -42,7 +42,7 @@ export default function Footer() {
       </div>
       <div style={{ maxWidth: 1120, margin: "32px auto 0", paddingTop: 24, borderTop: "1px solid rgba(255,241,219,0.06)", fontSize: 12, color: "var(--muted-2)", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 8 }}>
         <span>© {new Date().getFullYear()} OESS. All rights reserved.</span>
-        <span>Built by a founder, for founders who should not be doing admin.</span>
+        <span>Built for operators who should not be the coordination layer of their own business.</span>
       </div>
     </footer>
   );
