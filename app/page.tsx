@@ -181,7 +181,7 @@ export default function Home() {
                 marginBottom: 24,
               }}
             >
-              Private executive operating systems
+              Managed AI executive operating system
             </div>
             <h1
               style={{
@@ -221,8 +221,8 @@ export default function Home() {
               }}
             >
               We handle deployment, security hardening, workflow design, and
-              tuning so you stop being the human glue layer for every open loop in
-              the business.
+              tuning inside your environment so you stop being the human glue
+              layer for every open loop in the business.
             </p>
             <div
               style={{
@@ -262,6 +262,17 @@ export default function Home() {
                 See Pricing
               </Link>
             </div>
+            <p
+              style={{
+                margin: "0 0 24px",
+                color: "var(--muted-2)",
+                fontSize: 13,
+                lineHeight: 1.7,
+              }}
+            >
+              The assessment covers fit, workflow scope, and the first deployment
+              plan so you know exactly what gets installed first.
+            </p>
             <div
               className="trust-strip"
               style={{
@@ -964,7 +975,7 @@ export default function Home() {
               margin: "0 0 14px",
             }}
           >
-            Start with one executive bottleneck and get your time back.
+            Beta pricing starts at $497/mo.
           </h2>
           <p
             style={{

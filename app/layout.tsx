@@ -10,9 +10,9 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "OESS - AI Chief of Staff, Installed for Founders",
+  title: "OESS - Managed AI Executive Operating System",
   description:
-    "OESS deploys a private AI chief of staff with hardware included in your environment. Email triage, meeting prep, research, and follow-through for founder-led teams.",
+    "OESS installs and runs a private AI executive operating system for founders and executives. Daily briefings, follow-up coverage, meeting prep, and overnight execution in your environment.",
 };
 
 export default function RootLayout({
