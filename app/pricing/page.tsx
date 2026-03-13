@@ -6,10 +6,10 @@ const setupOptions = [
     name: "Private Cloud Setup",
     price: "$1,500",
     description:
-      "The fastest way to get started. We install your AI Chief of Staff in a cloud account you own and focus the first pass on the highest-friction part of your week.",
+      "Fastest path to launch. We install your AI Chief of Staff in a cloud account you own and focus the first pass on the highest-friction part of your week.",
     bullets: [
-      "Best when you want speed and a lighter setup path",
-      "Focused on one executive bottleneck first",
+      "Best when speed matters most",
+      "Starts with one executive bottleneck",
       "Includes two weeks of hands-on support after install",
     ],
   },
@@ -17,20 +17,20 @@ const setupOptions = [
     name: "Mac Mini Setup",
     price: "$2,500",
     description:
-      "For buyers who want the system running on local hardware they control. You buy the Mac Mini directly and we handle the setup and configuration.",
+      "For buyers who want the system running on hardware they physically control. You buy the Mac Mini directly and we handle setup and configuration.",
     bullets: [
-      "Best when you want the system on hardware you physically own",
-      "Often the right path when local integrations matter",
+      "Best when local control matters most",
+      "Often right when local integrations matter",
       "Includes two weeks of hands-on support after install",
     ],
   },
 ];
 
 const ongoingCare = [
-  "We monitor system health and fix breakage before it turns into silent failure.",
-  "We tune prompts, workflows, and routing as your priorities change.",
-  "We apply updates and upkeep so the system does not decay into a side project.",
-  "We stay available when a real edge case shows up in live work.",
+  "Monitoring and break-fix support",
+  "Workflow tuning as priorities change",
+  "Updates and upkeep",
+  "Help when edge cases show up in live work",
 ];
 
 export default function Pricing() {
@@ -57,7 +57,7 @@ export default function Pricing() {
             margin: "0 0 18px",
           }}
         >
-          Straightforward pricing.
+          Clear setup pricing.
         </h1>
         <p
           style={{
@@ -68,9 +68,7 @@ export default function Pricing() {
             maxWidth: 700,
           }}
         >
-          You are paying for setup, judgment, and support. The goal is simple:
-          get real work off your plate without turning this into another tool
-          you have to manage.
+          Pick the setup path that fits your control model, then decide if you want ongoing support.
         </p>
       </section>
 
@@ -227,8 +225,7 @@ export default function Pricing() {
             maxWidth: 720,
           }}
         >
-          This is the monthly support plan for buyers who want us to keep the
-          system sharp after setup instead of letting it drift into neglect.
+          Ongoing Care is for buyers who want the system maintained after setup instead of becoming the person who has to maintain it themselves.
         </p>
         <div style={{ display: "grid", gap: 10 }}>
           {ongoingCare.map((item) => (
@@ -270,8 +267,7 @@ export default function Pricing() {
             lineHeight: 1.8,
           }}
         >
-          Tell us what keeps landing back on you and whether you want a cloud or
-          Mac Mini setup. We will tell you the cleanest place to start.
+          Tell us what keeps landing back on you and whether you want cloud or Mac Mini. We will tell you the cleanest place to start.
         </p>
         <Link
           href="/contact"
@@ -285,7 +281,7 @@ export default function Pricing() {
             display: "inline-block",
           }}
         >
-          Request an Assessment
+          Request a Free Assessment
         </Link>
       </section>
 

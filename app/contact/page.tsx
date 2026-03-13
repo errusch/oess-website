@@ -83,14 +83,13 @@ export default function Contact() {
             Contact
           </div>
           <h1 style={{ fontSize: "clamp(42px, 6vw, 70px)", lineHeight: 0.98, letterSpacing: "-0.04em", margin: "0 0 16px", maxWidth: 720 }}>
-            Request a free assessment.
+            Request a Free Assessment.
           </h1>
           <p style={{ color: "var(--muted)", fontSize: 19, lineHeight: 1.8, margin: "0 0 18px", maxWidth: 680 }}>
-            Tell us what is still landing back on you. If this is a fit, we will
-            tell you where to start. If it is not, we will tell you that too.
+            Tell us what keeps landing back on you. We will tell you where we would start and whether the fit is real.
           </p>
           <p style={{ color: "var(--muted-2)", fontSize: 15, lineHeight: 1.8, margin: 0, maxWidth: 640 }}>
-            The more specific you are, the more useful the assessment will be.
+            A few concrete details are enough.
           </p>
         </div>
 
@@ -103,14 +102,14 @@ export default function Contact() {
           }}
         >
           <div style={{ fontSize: 12, fontWeight: 700, color: "var(--accent)", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 12 }}>
-            Before you send
+            Best notes include
           </div>
           <div style={{ display: "grid", gap: 12, color: "var(--muted)", fontSize: 15, lineHeight: 1.8 }}>
-            <p style={{ margin: 0 }}>Tell us what keeps landing back on you.</p>
-            <p style={{ margin: 0 }}>Tell us what part of the week is costing you the most time.</p>
-            <p style={{ margin: 0 }}>If you already know whether you want a cloud or Mac Mini setup, just mention it in your note.</p>
+            <p style={{ margin: 0 }}>The recurring work that keeps bouncing back to you.</p>
+            <p style={{ margin: 0 }}>Where the drag shows up most.</p>
+            <p style={{ margin: 0 }}>Whether you are leaning cloud or Mac Mini.</p>
             <p style={{ margin: 0, color: "var(--foreground)", fontWeight: 700 }}>
-              If it looks like a fit, the next step is a short assessment call.
+              If the fit is real, the next step is a short assessment call.
             </p>
           </div>
         </div>
@@ -123,8 +122,7 @@ export default function Contact() {
             Your request is in.
           </h2>
           <p style={{ color: "var(--muted)", fontSize: 16, lineHeight: 1.8, margin: 0 }}>
-            We&apos;ll review the fit and reply directly. If you need to reach us
-            immediately, email <a href="mailto:eric@oessai.com" style={{ color: "var(--accent)" }}>eric@oessai.com</a>.
+            We&apos;ll review the fit and reply directly. If you need to reach us immediately, email <a href="mailto:eric@oessai.com" style={{ color: "var(--accent)" }}>eric@oessai.com</a>.
           </p>
         </div>
       ) : (
@@ -182,7 +180,7 @@ export default function Contact() {
               <textarea
                 required
                 rows={7}
-                placeholder="Tell us what keeps landing back on you. If you already know you want a cloud or Mac Mini setup, include that too."
+                placeholder="Tell us what keeps landing back on you. If you already know you want cloud or Mac Mini, include that too."
                 value={form.message}
                 onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
                 style={{ ...inputStyle, resize: "vertical", minHeight: 160 }}
@@ -221,7 +219,7 @@ export default function Contact() {
               }}
               disabled={submitting}
             >
-              {submitting ? "Sending..." : "Send request"}
+              {submitting ? "Sending..." : "Request a Free Assessment"}
             </button>
           </form>
 
@@ -232,12 +230,7 @@ export default function Contact() {
               </div>
               <div style={{ color: "var(--muted)", fontSize: 15, lineHeight: 1.8 }}>
                 <p style={{ marginTop: 0 }}>
-                  We read every inquiry ourselves. If the fit is real, we reply
-                  directly and set up a short assessment call.
-                </p>
-                <p>
-                  The point of the call is simple: decide whether this will take
-                  real work off your plate.
+                  We read every inquiry ourselves. If the fit is real, we reply directly and set up a short assessment call.
                 </p>
                 <p style={{ marginBottom: 0 }}>
                   Direct email: <a href="mailto:eric@oessai.com" style={{ color: "var(--accent)" }}>eric@oessai.com</a>
@@ -247,7 +240,7 @@ export default function Contact() {
 
             <div style={{ border: "1px solid var(--border)", background: "rgba(255,248,236,0.03)", borderRadius: 28, padding: 24 }}>
               <div style={{ fontSize: 12, fontWeight: 700, color: "var(--accent)", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 12 }}>
-                Good fit messages usually sound like
+                Good fit notes usually sound like
               </div>
               <div style={{ display: "grid", gap: 10, color: "var(--muted)", fontSize: 15, lineHeight: 1.75 }}>
                 <p style={{ margin: 0 }}>

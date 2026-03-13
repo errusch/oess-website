@@ -5,39 +5,31 @@ import { useId, useState } from "react";
 const faqs = [
   {
     q: "What are you selling?",
-    a: "We install and support your AI Chief of Staff in your environment. It handles the administrative work that keeps coming back to you, so fewer hours disappear into inbox cleanup, meeting prep, follow-through, scheduling, and research drag.",
+    a: "We install and support your AI Chief of Staff in your environment so recurring admin work stops bouncing back to you.",
   },
   {
     q: "How is it different from ChatGPT?",
-    a: "ChatGPT waits for you to open it and drive every interaction yourself. This system is set up around recurring work so context, drafts, prep, and follow-through show up where you need them instead of living in another tab.",
+    a: "ChatGPT waits for you to open it and drive every interaction. This system is installed around recurring work so prep, drafts, and follow-through show up where you need them.",
   },
   {
     q: "What does setup look like?",
-    a: "We start with the single biggest drag on your week, install the system in a cloud account or on a Mac Mini you own, and keep the first scope tight enough to matter quickly. Most buyers should see something useful within a few days, then we stay close for the first two weeks to tune it around real work.",
+    a: "We start with one meaningful bottleneck, install the system in a cloud account or on a Mac Mini you own, and keep the first scope tight.",
   },
   {
     q: "Who owns the machine and accounts?",
-    a: "You do. You own the cloud account or Mac Mini, and the model and integration accounts stay in your name. We handle setup and support, but the control model stays with you.",
+    a: "You do. You own the cloud account or Mac Mini, and the model and integration accounts stay in your name.",
   },
   {
     q: "Can I use my own AI models?",
-    a: "Yes. We use your accounts, not ours. If you already have preferred model providers or account constraints, we work inside those instead of forcing you onto a hidden platform layer.",
+    a: "Yes. We work inside your accounts and constraints instead of forcing you onto a hidden platform layer.",
   },
   {
     q: "Is my data safe?",
-    a: "It runs in infrastructure you control, which is a stronger starting point than handing the whole workflow to a SaaS vendor. If support requires access to troubleshoot something, we ask first and keep that access explicit instead of pretending it does not exist.",
+    a: "It runs in infrastructure you control. If support requires access, we keep that access explicit and scoped.",
   },
   {
     q: "What if I want to cancel?",
-    a: "You keep what you own. If you stop Ongoing Care, we stop supporting the system, but the hardware and accounts remain yours. There is no platform in the middle that disappears and takes your setup with it.",
-  },
-  {
-    q: "Do I need technical skills?",
-    a: "No. You need to be able to explain how the work currently happens and where it keeps falling back on you. We handle the technical setup, edge cases, and maintenance work.",
-  },
-  {
-    q: "How quickly does it start working?",
-    a: "Usually within the first few days. Morning briefs, meeting prep, research pulls, and follow-through support are often the fastest wins because they remove visible friction immediately.",
+    a: "You keep what you own. If you stop Ongoing Care, support ends, but the hardware and accounts remain yours.",
   },
 ];
 
@@ -82,11 +74,10 @@ export default function FAQ() {
       <div style={{ maxWidth: 720, marginBottom: 34 }}>
         <div style={{ fontSize: 12, fontWeight: 700, color: "var(--accent)", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 16 }}>FAQ</div>
         <h1 style={{ fontSize: "clamp(42px, 6vw, 70px)", lineHeight: 0.98, letterSpacing: "-0.04em", margin: "0 0 16px" }}>
-          Questions you should ask before you buy.
+          Questions before you buy.
         </h1>
         <p style={{ color: "var(--muted)", fontSize: 19, lineHeight: 1.8, margin: 0 }}>
-          If your question is not here, email us directly. We will answer it
-          without the canned sales routine.
+          If your question is not here, email us directly. We will answer it plainly.
         </p>
       </div>
 
@@ -115,7 +106,7 @@ export default function FAQ() {
             margin: "0 0 12px",
           }}
         >
-          If the questions are answered, the next step is simple.
+          If the fit is real, the next step is simple.
         </h2>
         <p
           style={{
@@ -126,8 +117,7 @@ export default function FAQ() {
             lineHeight: 1.8,
           }}
         >
-          Tell us what keeps landing back on you and we will tell you whether
-          this is the right fit.
+          Tell us what keeps landing back on you and we will tell you where we would start.
         </p>
         <Link
           href="/contact"
@@ -141,7 +131,7 @@ export default function FAQ() {
             display: "inline-block",
           }}
         >
-          Request an Assessment
+          Request a Free Assessment
         </Link>
       </section>
     </div>

@@ -2,17 +2,19 @@
 import Link from "next/link";
 
 const process = [
-  ["01", "Map the drag", "We start with the part of your week that keeps coming back to you: inbox, meeting prep, follow-through, research, or scheduling."],
-  ["02", "Install it in your environment", "We set it up in a cloud account or on a Mac Mini you own, connect the right tools, and keep the scope tight enough to matter fast."],
-  ["03", "Stay close until it is useful", "We watch the first two weeks closely, fix edge cases, and tune the system around real work so you are not left alone after setup."],
+  ["01", "Choose the bottleneck", "We start with the recurring work that keeps bouncing back to you."],
+  ["02", "Install in your environment", "We set it up in a cloud account or on a Mac Mini you control."],
+  ["03", "Tune it in live use", "We stay close for the first two weeks so it works in real operating conditions."],
 ];
 
 const controlPoints = [
-  "Runs in a cloud account or on a Mac Mini you own",
+  "Cloud account or Mac Mini you control",
   "Your model and app accounts stay yours",
-  "Two weeks of hands-on support after setup",
+  "Scoped support access when needed",
   "No hidden platform in the middle",
 ];
+
+const ctaLabel = "Request a Free Assessment";
 
 export default function Home() {
   return (
@@ -62,11 +64,9 @@ export default function Home() {
                 maxWidth: 760,
               }}
             >
-              Reclaim the hours that
+              Get the recurring work
               <br />
-              actually move
-              <br />
-              your business.
+              off your plate.
             </h1>
             <p
               style={{
@@ -77,9 +77,7 @@ export default function Home() {
                 margin: "0 0 16px",
               }}
             >
-              We install your AI Chief of Staff in your environment so inbox
-              cleanup, meeting prep, research, and follow-through stop eating
-              the best hours of your week.
+              We install your AI Chief of Staff in your environment so inbox cleanup, meeting prep, research, and follow-through stop consuming the best hours of your week.
             </p>
             <p
               style={{
@@ -90,8 +88,7 @@ export default function Home() {
                 maxWidth: 620,
               }}
             >
-              We handle setup, support, and the messy edge cases that keep most
-              people from ever getting this working.
+              One clear starting point. Your infrastructure, your accounts, your control.
             </p>
             <div
               style={{
@@ -113,7 +110,7 @@ export default function Home() {
                   display: "inline-block",
                 }}
               >
-                Request a Free Assessment
+                {ctaLabel}
               </Link>
               <Link
                 href="/pricing"
@@ -165,28 +162,23 @@ export default function Home() {
                   marginBottom: 18,
                 }}
               >
-                What the system actually does
+                One concrete example
               </div>
               {[
                 [
                   "6:30 AM",
                   "Builds your decision brief",
-                  "The day starts with priorities, risks, and the few things that need your attention.",
+                  "The day starts with priorities, risks, and the few items that actually need you.",
                 ],
                 [
                   "Before first meeting",
                   "Pulls the missing context together",
-                  "Relevant notes, loose ends, and talking points are already waiting when you sit down.",
+                  "Relevant notes, loose ends, and talking points are waiting before the meeting starts.",
                 ],
                 [
                   "During the day",
                   "Catches follow-through before it slips",
-                  "Drafts, reminders, research pulls, and admin cleanup stop falling back on you by default.",
-                ],
-                [
-                  "Overnight",
-                  "Keeps background work moving",
-                  "Deferred research, inbox cleanup, and prep work keep moving while you are offline.",
+                  "Drafts, reminders, and admin cleanup stop bouncing back to you by default.",
                 ],
               ].map(([time, title, copy], index) => (
                 <div
@@ -249,20 +241,14 @@ export default function Home() {
               Why buyers trust this
             </div>
             <h2 style={{ fontSize: "clamp(28px, 4vw, 42px)", lineHeight: 1.02, letterSpacing: "-0.03em", margin: "0 0 14px" }}>
-              Built from the system I wanted for myself first.
+              Private by setup.
             </h2>
             <div style={{ display: "grid", gap: 12, color: "var(--muted)", fontSize: 16, lineHeight: 1.8 }}>
               <p style={{ margin: 0 }}>
-                This runs in your environment, not inside another company's
-                black box.
+                It runs in your environment, not inside a shared OESS platform.
               </p>
               <p style={{ margin: 0 }}>
-                You keep the hardware and accounts. We do the install work and
-                stay close while it proves itself in real use.
-              </p>
-              <p style={{ margin: 0 }}>
-                That is the whole pitch: real help without handing your working
-                system to somebody else.
+                You keep the hardware and accounts. We handle setup and the first two weeks of support.
               </p>
             </div>
           </div>
@@ -282,9 +268,6 @@ export default function Home() {
               {controlPoints.map((item) => (
                 <p key={item} style={{ margin: 0 }}>{item}</p>
               ))}
-              <p style={{ margin: 0, color: "var(--foreground)", fontWeight: 700 }}>
-                The goal is simple: buy back time without giving up control.
-              </p>
             </div>
           </div>
         </div>
@@ -305,11 +288,10 @@ export default function Home() {
               How it works
             </div>
             <h2 style={{ fontSize: "clamp(34px, 4.5vw, 54px)", lineHeight: 1.02, letterSpacing: "-0.03em", margin: "0 0 12px" }}>
-              Start with one drag point. Make it useful fast.
+              Start narrow. Make it useful fast.
             </h2>
             <p style={{ margin: 0, color: "var(--muted)", fontSize: 17, lineHeight: 1.8 }}>
-              You do not need a giant AI transformation project. You need one
-              part of the week to stop bouncing back to you.
+              We remove one recurring executive drag point first.
             </p>
           </div>
           <div style={{ display: "grid", gap: 12 }}>
@@ -361,9 +343,9 @@ export default function Home() {
               Best fit
             </div>
             <div style={{ display: "grid", gap: 10, color: "var(--muted)", fontSize: 15, lineHeight: 1.72 }}>
-              <p style={{ margin: 0 }}>Founders and executives who still carry too much coordination work themselves.</p>
+              <p style={{ margin: 0 }}>Founders and executives carrying too much coordination work themselves.</p>
               <p style={{ margin: 0 }}>Teams with heavy inbox, calendar, meeting, or follow-through load.</p>
-              <p style={{ margin: 0 }}>People who want hands-on help, not another tool to babysit.</p>
+              <p style={{ margin: 0 }}>Buyers who want hands-on implementation, not another tool to manage.</p>
             </div>
           </div>
           <div
@@ -407,7 +389,7 @@ export default function Home() {
               marginBottom: 14,
             }}
           >
-            The Bottom Line
+            Next step
           </div>
           <h2
             style={{
@@ -417,7 +399,7 @@ export default function Home() {
               margin: "0 0 14px",
             }}
           >
-            If this sounds like the kind of help you actually want, start with the free assessment.
+            Start with a free assessment.
           </h2>
           <p
             style={{
@@ -428,8 +410,7 @@ export default function Home() {
               lineHeight: 1.7,
             }}
           >
-            Tell us what still keeps landing back on you. We will tell you if
-            this is a fit and where we would start.
+            Tell us what keeps landing back on you. We will tell you if the fit is real and where we would begin.
           </p>
           <div
             style={{
@@ -451,7 +432,7 @@ export default function Home() {
                 display: "inline-block",
               }}
             >
-              Request a Free Assessment
+              {ctaLabel}
             </Link>
             <Link
               href="/pricing"
