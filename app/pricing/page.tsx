@@ -4,7 +4,7 @@ import Link from "next/link";
 const setupOptions = [
   {
     name: "Private Cloud Setup",
-    price: "$1,500 once",
+    price: "$1,500",
     description:
       "The fastest way to get started. We install your AI Chief of Staff in a cloud account you own and focus the first pass on the highest-friction part of your week.",
     bullets: [
@@ -15,7 +15,7 @@ const setupOptions = [
   },
   {
     name: "Mac Mini Setup",
-    price: "$2,500 once",
+    price: "$2,500",
     description:
       "For buyers who want the system running on local hardware they control. You buy the Mac Mini directly and we handle the setup and configuration.",
     bullets: [
@@ -57,7 +57,7 @@ export default function Pricing() {
             margin: "0 0 18px",
           }}
         >
-          What this costs.
+          Straightforward pricing.
         </h1>
         <p
           style={{
@@ -68,8 +68,8 @@ export default function Pricing() {
             maxWidth: 720,
           }}
         >
-          Setup starts at $1,500 once. Mac Mini Setup is $2,500 once. Ongoing
-          Care is $497/mo. We handle the setup and support.
+          Cloud Setup starts at $1,500. Mac Mini Setup is $2,500. Ongoing Care
+          is $497/mo.
         </p>
         <p
           style={{
@@ -80,9 +80,9 @@ export default function Pricing() {
             maxWidth: 700,
           }}
         >
-          If this buys back even a few executive hours each month, it starts to
-          justify itself quickly. The point is not software access. The point is
-          getting real work off your plate.
+          You are paying for setup, judgment, and support. The goal is simple:
+          get real work off your plate without turning this into another tool
+          you have to manage.
         </p>
       </section>
 
@@ -188,26 +188,48 @@ export default function Pricing() {
       >
         <div
           style={{
-            fontSize: 12,
-            fontWeight: 700,
-            letterSpacing: "0.12em",
-            textTransform: "uppercase",
-            color: "var(--accent)",
+            display: "grid",
+            gridTemplateColumns: "minmax(0, 1fr) auto",
+            gap: 16,
+            alignItems: "end",
             marginBottom: 12,
           }}
+          className="pricing-topline"
         >
-          Ongoing Care — $497/mo
+          <div>
+            <div
+              style={{
+                fontSize: 12,
+                fontWeight: 700,
+                letterSpacing: "0.12em",
+                textTransform: "uppercase",
+                color: "var(--accent)",
+                marginBottom: 8,
+              }}
+            >
+              Monthly Support
+            </div>
+            <h2
+              style={{
+                fontSize: "clamp(30px, 4vw, 42px)",
+                lineHeight: 1.02,
+                letterSpacing: "-0.03em",
+                margin: 0,
+              }}
+            >
+              Ongoing Care
+            </h2>
+          </div>
+          <div
+            style={{
+              fontSize: "clamp(28px, 4vw, 40px)",
+              fontWeight: 700,
+              color: "var(--accent-strong)",
+            }}
+          >
+            $497/mo
+          </div>
         </div>
-        <h2
-          style={{
-            fontSize: "clamp(30px, 4vw, 42px)",
-            lineHeight: 1.02,
-            letterSpacing: "-0.03em",
-            margin: "0 0 12px",
-          }}
-        >
-          This is what keeps the system useful after setup.
-        </h2>
         <p
           style={{
             margin: "0 0 18px",
@@ -217,9 +239,8 @@ export default function Pricing() {
             maxWidth: 720,
           }}
         >
-          Ongoing Care is for buyers who do not want the system to slowly turn
-          into another neglected internal tool. We stay responsible for the
-          upkeep so you keep getting the benefit.
+          This is the monthly support plan for buyers who want us to keep the
+          system sharp after setup instead of letting it drift into neglect.
         </p>
         <div style={{ display: "grid", gap: 10 }}>
           {ongoingCare.map((item) => (
