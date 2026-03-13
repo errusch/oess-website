@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: "Is my data safe?",
-    a: "It runs in infrastructure you control. If support requires access, we keep that access explicit and scoped.",
+    a: "Your data stays in infrastructure you control, which is a cleaner setup than handing the whole workflow to someone else's platform. If we ever need access to troubleshoot something, we ask first and keep that access clear.",
   },
   {
     q: "What if I want to cancel?",
