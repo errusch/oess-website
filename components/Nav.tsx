@@ -9,6 +9,9 @@ const links = [
   { href: "/faq", label: "FAQ" },
 ];
 
+const ctaLabel = "Request a Free Assessment";
+const brandLabel = "Openclaw Executive Setup Service";
+
 export default function Nav() {
   const [open, setOpen] = useState(false);
 
@@ -34,8 +37,18 @@ export default function Nav() {
           height: 72,
         }}
       >
-        <Link href="/" style={{ fontWeight: 700, fontSize: 20, letterSpacing: "-0.03em" }}>
-          <span style={{ color: "var(--accent)" }}>OESS</span>
+        <Link
+          href="/"
+          style={{
+            fontWeight: 700,
+            fontSize: 15,
+            letterSpacing: "-0.02em",
+            lineHeight: 1.1,
+            maxWidth: 280,
+            color: "var(--foreground)",
+          }}
+        >
+          {brandLabel}
         </Link>
 
         <div style={{ display: "flex", gap: 24, alignItems: "center" }} className="desktop-nav">
@@ -64,7 +77,7 @@ export default function Nav() {
             onMouseEnter={(e) => (e.currentTarget.style.background = "var(--accent-strong)")}
             onMouseLeave={(e) => (e.currentTarget.style.background = "var(--accent)")}
           >
-            Request an Assessment
+            {ctaLabel}
           </Link>
         </div>
 
@@ -121,7 +134,7 @@ export default function Nav() {
               textAlign: "center",
             }}
           >
-            Request an Assessment
+            {ctaLabel}
           </Link>
         </div>
       )}
@@ -130,6 +143,12 @@ export default function Nav() {
         @media (max-width: 768px) {
           .desktop-nav { display: none !important; }
           .mobile-menu-btn { display: block !important; }
+        }
+        @media (max-width: 520px) {
+          nav a[href="/"] {
+            font-size: 12px !important;
+            max-width: 210px !important;
+          }
         }
       `}</style>
     </nav>
