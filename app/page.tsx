@@ -409,25 +409,6 @@ export default function Home() {
           >
             The Bottom Line
           </div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              gap: 10,
-              flexWrap: "wrap",
-              marginBottom: 16,
-              color: "var(--muted-2)",
-              fontSize: 12,
-              letterSpacing: "0.08em",
-              textTransform: "uppercase",
-            }}
-          >
-            <span>Home</span>
-            <span>/</span>
-            <span style={{ color: "var(--foreground)" }}>Free Assessment</span>
-            <span>/</span>
-            <span>Pricing and Booking</span>
-          </div>
           <h2
             style={{
               fontSize: "clamp(32px, 4vw, 52px)",
@@ -449,19 +430,6 @@ export default function Home() {
           >
             Tell us what still keeps landing back on you. We will tell you if
             this is a fit and where we would start.
-          </p>
-          <p
-            style={{
-              margin: "0 auto 28px",
-              maxWidth: 560,
-              color: "var(--muted-2)",
-              fontSize: 15,
-              lineHeight: 1.8,
-            }}
-          >
-            If you want the numbers first, you can review pricing. If you are
-            ready to talk it through, request the assessment and we will take it
-            from there.
           </p>
           <div
             style={{
