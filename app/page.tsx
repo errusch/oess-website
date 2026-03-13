@@ -98,7 +98,7 @@ export default function Home() {
                 display: "flex",
                 gap: 14,
                 flexWrap: "wrap",
-                marginBottom: 20,
+                marginBottom: 12,
               }}
             >
               <Link
@@ -130,20 +130,6 @@ export default function Home() {
               >
                 Review Pricing
               </Link>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                gap: 18,
-                flexWrap: "wrap",
-                color: "var(--muted-2)",
-                fontSize: 13,
-              }}
-            >
-              <span>Setup starts at $1,500 once</span>
-              <span>Ongoing Care is $497/mo</span>
-              <span>Installed in 48-72 hours</span>
-              <span>Two weeks hands-on support</span>
             </div>
           </div>
 
@@ -421,7 +407,7 @@ export default function Home() {
               marginBottom: 14,
             }}
           >
-            Pricing
+            The Bottom Line
           </div>
           <h2
             style={{
@@ -431,7 +417,7 @@ export default function Home() {
               margin: "0 0 14px",
             }}
           >
-            Setup starts at $1,500 once.
+            If this sounds like the kind of help you actually want, start with pricing.
           </h2>
           <p
             style={{
@@ -442,8 +428,8 @@ export default function Home() {
               lineHeight: 1.7,
             }}
           >
-            Ongoing Care is $497/mo. Mac Mini Setup is $2,500 once. We handle
-            the setup and support.
+            The pricing page shows what setup looks like, what you own, and how
+            we structure the work.
           </p>
           <p
             style={{
@@ -454,8 +440,8 @@ export default function Home() {
               lineHeight: 1.8,
             }}
           >
-            If this buys back even a few executive hours each month, the math gets
-            clear quickly.
+            If it feels like a fit after that, request an assessment and we will
+            tell you what we would recommend.
           </p>
           <div
             style={{
