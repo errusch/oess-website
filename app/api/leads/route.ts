@@ -69,6 +69,7 @@ function getWebhookHeaders() {
 
   if (secret) {
     headers["x-oess-webhook-secret"] = secret;
+    headers["x-make-apikey"] = secret;
   }
 
   return headers;
