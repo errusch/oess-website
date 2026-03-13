@@ -2,12 +2,14 @@
 import Link from "next/link";
 
 export default function Footer() {
+  const brandLabel = "Openclaw Executive Setup Service";
+
   return (
     <footer style={{ borderTop: "1px solid rgba(255,241,219,0.08)", padding: "44px 24px", marginTop: 96 }}>
       <div style={{ maxWidth: 1120, margin: "0 auto", display: "flex", flexWrap: "wrap", gap: 32, justifyContent: "space-between", alignItems: "flex-start" }}>
         <div>
-          <div style={{ fontWeight: 700, fontSize: 18, marginBottom: 8 }}>
-            <span style={{ color: "var(--accent)" }}>OESS</span>
+          <div style={{ fontWeight: 700, fontSize: 16, marginBottom: 8, maxWidth: 320, lineHeight: 1.2 }}>
+            <span style={{ color: "var(--accent)" }}>{brandLabel}</span>
           </div>
           <p style={{ fontSize: 13, color: "var(--muted-2)", maxWidth: 360, lineHeight: 1.7 }}>
             Private AI operating systems for founders and executives. Installed in a cloud account or on hardware you control.
@@ -29,7 +31,7 @@ export default function Footer() {
         </div>
       </div>
       <div style={{ maxWidth: 1120, margin: "32px auto 0", paddingTop: 24, borderTop: "1px solid rgba(255,241,219,0.06)", fontSize: 12, color: "var(--muted-2)", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 8 }}>
-        <span>© {new Date().getFullYear()} OESS. All rights reserved.</span>
+        <span>© {new Date().getFullYear()} {brandLabel}. All rights reserved.</span>
         <span>Built by a founder who wanted this for himself first.</span>
       </div>
     </footer>
