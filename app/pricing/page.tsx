@@ -193,7 +193,7 @@ export default function Pricing() {
                 marginBottom: 8,
               }}
             >
-              Monthly Support
+              Optional after setup
             </div>
             <h2
               style={{
@@ -225,7 +225,7 @@ export default function Pricing() {
             maxWidth: 720,
           }}
         >
-          Choose this if you want ongoing support after setup.
+          Add this after either setup if you want monthly support.
         </p>
         <div style={{ display: "grid", gap: 10 }}>
           {ongoingCare.map((item) => (
