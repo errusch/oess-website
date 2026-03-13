@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: "Is my data safe?",
-    a: "It runs in infrastructure you control, which is a stronger starting point than handing the whole workflow to a SaaS vendor. If support requires access to troubleshoot something, we ask first and keep that access explicit instead of pretending it does not exist.",
+    a: "Your data stays in infrastructure you control, which is a cleaner setup than handing the whole workflow to someone else's platform. If we ever need access to troubleshoot something, we ask first and keep that access clear.",
   },
   {
     q: "What if I want to cancel?",
