@@ -16,9 +16,9 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "OESS - AI Chief of Staff, Installed for Founders",
+  title: "OESS | Your Private AI Chief of Staff",
   description:
-    "OESS deploys a private AI chief of staff with hardware included in your environment. Email triage, meeting prep, research, and follow-through for founder-led teams.",
+    "We set up your private AI Chief of Staff so email, meeting prep, research, and follow-through stop eating the best hours of your week.",
 };
 
 export default function RootLayout({

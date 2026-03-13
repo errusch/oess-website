@@ -1,6 +1,19 @@
 "use client";
 import Link from "next/link";
 
+const process = [
+  ["01", "Map the drag", "We start with the part of your week that keeps coming back to you: inbox, meeting prep, follow-through, research, or scheduling."],
+  ["02", "Install it in your environment", "We set it up in a cloud account or on a Mac Mini you own, connect the right tools, and keep the scope tight enough to matter fast."],
+  ["03", "Stay close until it is useful", "We watch the first two weeks closely, fix edge cases, and tune the system around real work so you are not left alone after setup."],
+];
+
+const controlPoints = [
+  "Runs in a cloud account or on a Mac Mini you own",
+  "Your model and app accounts stay yours",
+  "Two weeks of hands-on support after setup",
+  "No hidden platform in the middle",
+];
+
 export default function Home() {
   return (
     <div>
@@ -8,7 +21,7 @@ export default function Home() {
         style={{
           maxWidth: 1120,
           margin: "0 auto",
-          padding: "84px 24px 40px",
+          padding: "84px 24px 28px",
         }}
       >
         <div
@@ -38,42 +51,54 @@ export default function Home() {
                 marginBottom: 24,
               }}
             >
-              For busy executives and founders
+              For founders and executives
             </div>
             <h1
               style={{
                 fontSize: "clamp(50px, 8vw, 94px)",
                 lineHeight: 0.96,
                 letterSpacing: "-0.04em",
-                margin: "0 0 22px",
+                margin: "0 0 20px",
                 maxWidth: 760,
               }}
             >
-              Stop being the
+              Reclaim the hours that
               <br />
-              bottleneck in
+              actually move
               <br />
-              your own business.
+              your business.
             </h1>
             <p
               style={{
                 fontSize: "clamp(18px, 2.2vw, 24px)",
                 lineHeight: 1.55,
                 color: "var(--muted)",
-                maxWidth: 640,
-                margin: "0 0 28px",
+                maxWidth: 660,
+                margin: "0 0 16px",
               }}
             >
-              OESS gives you a private AI chief of staff with hardware included
-              in your environment, so email, meeting prep, research, and
-              follow-through stop eating the best hours of your week.
+              We install your AI Chief of Staff in your environment so inbox
+              cleanup, meeting prep, research, and follow-through stop eating
+              the best hours of your week.
+            </p>
+            <p
+              style={{
+                margin: "0 0 28px",
+                color: "var(--muted-2)",
+                fontSize: 15,
+                lineHeight: 1.8,
+                maxWidth: 620,
+              }}
+            >
+              We handle setup, support, and the messy edge cases that keep most
+              people from ever getting this working.
             </p>
             <div
               style={{
                 display: "flex",
                 gap: 14,
                 flexWrap: "wrap",
-                marginBottom: 24,
+                marginBottom: 20,
               }}
             >
               <Link
@@ -88,7 +113,7 @@ export default function Home() {
                   display: "inline-block",
                 }}
               >
-                Request Assessment
+                Request an Assessment
               </Link>
               <Link
                 href="/pricing"
@@ -103,7 +128,7 @@ export default function Home() {
                   display: "inline-block",
                 }}
               >
-                See Pricing
+                Review Pricing
               </Link>
             </div>
             <div
@@ -115,10 +140,10 @@ export default function Home() {
                 fontSize: 13,
               }}
             >
+              <span>Setup starts at $1,500 once</span>
+              <span>Ongoing Care is $497/mo</span>
               <span>Installed in 48-72 hours</span>
-              <span>Hardware included</span>
-              <span>15-20 hours back per week</span>
-              <span>No SaaS lock-in</span>
+              <span>Two weeks hands-on support</span>
             </div>
           </div>
 
@@ -159,31 +184,31 @@ export default function Home() {
               {[
                 [
                   "6:30 AM",
-                  "Builds your morning brief",
-                  "What matters today, what slipped, what needs a decision.",
+                  "Builds your decision brief",
+                  "The day starts with priorities, risks, and the few things that need your attention.",
                 ],
                 [
                   "Before first meeting",
-                  "Preps the room for you",
-                  "Relevant context, open loops, and draft replies already waiting.",
+                  "Pulls the missing context together",
+                  "Relevant notes, loose ends, and talking points are already waiting when you sit down.",
                 ],
                 [
                   "During the day",
-                  "Handles the administrative drag",
-                  "Inbox triage, scheduling friction, research pulls, follow-up capture.",
+                  "Catches follow-through before it slips",
+                  "Drafts, reminders, research pulls, and admin cleanup stop falling back on you by default.",
                 ],
                 [
                   "Overnight",
-                  "Keeps moving while you're offline",
-                  "Research batches, workflow cleanup, and deferred tasks run in the background.",
+                  "Keeps background work moving",
+                  "Deferred research, inbox cleanup, and prep work keep moving while you are offline.",
                 ],
               ].map(([time, title, copy], index) => (
                 <div
                   key={title}
                   style={{
                     padding: "18px 0",
-                    borderTop:
-                      index === 0 ? "1px solid rgba(255,241,219,0.08)" : "1px solid rgba(255,241,219,0.08)",
+                    borderTop: "1px solid rgba(255,241,219,0.08)",
+                    opacity: index === 0 ? 1 : 0.96,
                   }}
                 >
                   <div
@@ -197,13 +222,7 @@ export default function Home() {
                   >
                     {time}
                   </div>
-                  <div
-                    style={{
-                      fontSize: 20,
-                      fontWeight: 500,
-                      marginBottom: 6,
-                    }}
-                  >
+                  <div style={{ fontSize: 20, fontWeight: 500, marginBottom: 6 }}>
                     {title}
                   </div>
                   <p
@@ -223,227 +242,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section style={{ maxWidth: 760, margin: "0 auto", padding: "28px 24px 10px" }}>
-        <p
-          style={{
-            fontSize: "clamp(26px, 4vw, 42px)",
-            lineHeight: 1.32,
-            letterSpacing: "-0.02em",
-            margin: 0,
-          }}
-        >
-          This is for founders, CEOs, presidents, managing partners, and other
-          operators who are still losing hours every day to inbox management,
-          scheduling, meeting prep, follow-up, and low-level coordination.
-        </p>
-      </section>
-
-      <section style={{ maxWidth: 760, margin: "0 auto", padding: "42px 24px" }}>
-        <div style={{ color: "var(--muted)", fontSize: 18, lineHeight: 1.9 }}>
-          <p>
-            Most people do not need “more AI tools.” They need someone to take
-            work off their plate without creating another dashboard to babysit.
-          </p>
-          <p>
-            That is the gap OESS is built for. I deploy the system, wire it to
-            your real workflow, and make it useful fast. The machine is part of
-            the service. Your accounts stay yours. You are not buying another
-            SaaS subscription and you are not paying a setup tax to figure it
-            out yourself.
-          </p>
-          <p>
-            You are buying back focus and decision time.
-          </p>
-        </div>
-      </section>
-
-      <section style={{ maxWidth: 760, margin: "0 auto", padding: "4px 24px 28px" }}>
-        <div
-          style={{
-            padding: "26px 28px",
-            borderRadius: 24,
-            border: "1px solid var(--border)",
-            background: "rgba(255,248,236,0.03)",
-          }}
-        >
-          <div
-            style={{
-              fontSize: 12,
-              fontWeight: 700,
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
-              color: "var(--accent)",
-              marginBottom: 12,
-            }}
-          >
-            Why this is different
-          </div>
-          <p style={{ margin: "0 0 12px", color: "var(--muted)", fontSize: 17, lineHeight: 1.8 }}>
-            OESS is not coming from someone who only knows prompts or only knows
-            operations. I started in IT and moved deeper into business operations
-            over time, which means I care about both sides of the problem:
-            getting the system to work and making sure it actually helps the business.
-          </p>
-          <p style={{ margin: 0, color: "var(--muted)", fontSize: 17, lineHeight: 1.8 }}>
-            That matters because busy executives do not need more tooling. They
-            need someone who can translate technical capability into practical
-            operating relief.
-          </p>
-        </div>
-      </section>
-
-      <section style={{ maxWidth: 1120, margin: "0 auto", padding: "22px 24px 28px" }}>
+      <section style={{ maxWidth: 1120, margin: "0 auto", padding: "4px 24px 32px" }}>
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-            gap: 18,
-          }}
-        >
-          {[
-            [
-              "Morning briefings",
-              "A clean read on priorities, deadlines, and unresolved threads before the day starts.",
-            ],
-            [
-              "Inbox triage",
-              "Drafts, urgency sorting, and noise reduction before you touch your email.",
-            ],
-            [
-              "Meeting prep",
-              "Context packets, talking points, and follow-up capture so meetings do not die in your notes.",
-            ],
-            [
-              "Private deployment",
-              "Runs on a dedicated machine in your environment with your accounts, not inside somebody else's product.",
-            ],
-          ].map(([title, copy]) => (
-            <div
-              key={title}
-              style={{
-                padding: 24,
-                borderRadius: 24,
-                border: "1px solid var(--border)",
-                background: "var(--surface)",
-              }}
-            >
-              <h3
-                style={{
-                  fontSize: 24,
-                  lineHeight: 1.15,
-                  margin: "0 0 10px",
-                }}
-              >
-                {title}
-              </h3>
-              <p
-                style={{
-                  margin: 0,
-                  fontSize: 14,
-                  lineHeight: 1.7,
-                  color: "var(--muted)",
-                }}
-              >
-                {copy}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section style={{ maxWidth: 1120, margin: "0 auto", padding: "26px 24px 28px" }}>
-        <div
-          style={{
-            padding: "30px 30px 32px",
-            borderRadius: 28,
-            border: "1px solid var(--border)",
-            background: "rgba(255,248,236,0.03)",
-          }}
-        >
-          <div
-            style={{
-              fontSize: 12,
-              fontWeight: 700,
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
-              color: "var(--accent)",
-              marginBottom: 14,
-            }}
-          >
-            What you actually get
-          </div>
-          <h2
-            style={{
-              fontSize: "clamp(32px, 4vw, 52px)",
-              lineHeight: 1.02,
-              letterSpacing: "-0.03em",
-              margin: "0 0 18px",
-              maxWidth: 760,
-            }}
-          >
-            A real system should produce real outputs.
-          </h2>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-              gap: 18,
-            }}
-          >
-            {[
-              {
-                title: "Morning briefing",
-                body: "Top priorities, calendar risks, unresolved threads, and the handful of messages that actually matter before the day starts.",
-                sample: "Today: 3 decisions, 1 meeting risk, 4 emails worth reading, 2 follow-ups overdue.",
-              },
-              {
-                title: "Inbox triage",
-                body: "A filtered view of what needs your answer, what can be drafted for review, and what should be ignored or delegated.",
-                sample: "Urgent: board counsel. Draft ready: client renewal. Ignore: vendor spam. Delegate: scheduling chain.",
-              },
-              {
-                title: "Meeting prep",
-                body: "Context, prior conversations, open loops, and talking points before you walk into the room.",
-                sample: "Meeting with Acme: last contact 9 days ago, pricing objection unresolved, decision maker joining today.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                style={{
-                  padding: 24,
-                  borderRadius: 24,
-                  border: "1px solid var(--border)",
-                  background: "var(--surface)",
-                }}
-              >
-                <h3 style={{ fontSize: 24, lineHeight: 1.08, margin: "0 0 10px" }}>{item.title}</h3>
-                <p style={{ margin: "0 0 14px", color: "var(--muted)", lineHeight: 1.7, fontSize: 15 }}>
-                  {item.body}
-                </p>
-                <div
-                  style={{
-                    borderRadius: 18,
-                    padding: "14px 16px",
-                    background: "rgba(255,248,236,0.03)",
-                    border: "1px solid rgba(255,241,219,0.08)",
-                    color: "var(--muted-2)",
-                    fontSize: 13,
-                    lineHeight: 1.7,
-                  }}
-                >
-                  {item.sample}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section style={{ maxWidth: 1120, margin: "0 auto", padding: "4px 24px 26px" }}>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1.15fr 0.85fr",
+            gridTemplateColumns: "1.05fr 0.95fr",
             gap: 18,
           }}
           className="proof-grid"
@@ -457,20 +260,24 @@ export default function Home() {
             }}
           >
             <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--accent)", marginBottom: 12 }}>
-              What improvement looks like
+              Why buyers trust this
             </div>
-            <h3 style={{ fontSize: "clamp(28px, 4vw, 42px)", lineHeight: 1.02, letterSpacing: "-0.03em", margin: "0 0 14px" }}>
-              The first win should be obvious.
-            </h3>
-            <p style={{ margin: "0 0 14px", color: "var(--muted)", fontSize: 16, lineHeight: 1.8 }}>
-              A serious deployment should make the executive feel relief fast. The
-              first week is not about proving artificial general intelligence. It
-              is about making the workday less fragmented.
-            </p>
-            <div style={{ display: "grid", gap: 10, color: "var(--muted)", fontSize: 15, lineHeight: 1.75 }}>
-              <p style={{ margin: 0 }}>Monday morning starts with a usable briefing instead of a blank inbox.</p>
-              <p style={{ margin: 0 }}>Important messages are surfaced, draftable work is separated, and noise is reduced.</p>
-              <p style={{ margin: 0 }}>Meetings stop feeling like context resets because the prep is already there.</p>
+            <h2 style={{ fontSize: "clamp(28px, 4vw, 42px)", lineHeight: 1.02, letterSpacing: "-0.03em", margin: "0 0 14px" }}>
+              Built from the system I wanted for myself first.
+            </h2>
+            <div style={{ display: "grid", gap: 12, color: "var(--muted)", fontSize: 16, lineHeight: 1.8 }}>
+              <p style={{ margin: 0 }}>
+                This runs in your environment, not inside another company's
+                black box.
+              </p>
+              <p style={{ margin: 0 }}>
+                You keep the hardware and accounts. We do the install work and
+                stay close while it proves itself in real use.
+              </p>
+              <p style={{ margin: 0 }}>
+                That is the whole pitch: real help without handing your working
+                system to somebody else.
+              </p>
             </div>
           </div>
           <div
@@ -478,31 +285,76 @@ export default function Home() {
               padding: 28,
               borderRadius: 24,
               border: "1px solid var(--border)",
-              background: "linear-gradient(180deg, rgba(210,170,109,0.1), rgba(255,248,236,0.03))",
+              background:
+                "linear-gradient(180deg, rgba(210,170,109,0.1), rgba(255,248,236,0.03))",
             }}
           >
             <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--accent)", marginBottom: 12 }}>
-              Example outcome
+              What stays in your control
             </div>
-            <div style={{ color: "var(--muted)", fontSize: 15, lineHeight: 1.8 }}>
-              <p style={{ marginTop: 0 }}>
-                Founder with a heavy meeting calendar and constant inbox churn:
-              </p>
-              <p>
-                week one focuses on morning briefing, inbox triage, and meeting prep;
-                the result is fewer context resets, faster replies, and cleaner
-                follow-through.
-              </p>
-              <p style={{ marginBottom: 0 }}>
-                That is the standard. If the first week does not feel like visible
-                operational relief, the deployment is not finished.
+            <div style={{ display: "grid", gap: 10, color: "var(--muted)", fontSize: 15, lineHeight: 1.8 }}>
+              {controlPoints.map((item) => (
+                <p key={item} style={{ margin: 0 }}>{item}</p>
+              ))}
+              <p style={{ margin: 0, color: "var(--foreground)", fontWeight: 700 }}>
+                The goal is simple: buy back time without giving up control.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section style={{ maxWidth: 1120, margin: "0 auto", padding: "18px 24px 24px" }}>
+      <section style={{ maxWidth: 1120, margin: "0 auto", padding: "2px 24px 34px" }}>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "0.8fr 1.2fr",
+            gap: 28,
+            alignItems: "start",
+          }}
+          className="setup-grid"
+        >
+          <div>
+            <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--accent)", marginBottom: 12 }}>
+              How it works
+            </div>
+            <h2 style={{ fontSize: "clamp(34px, 4.5vw, 54px)", lineHeight: 1.02, letterSpacing: "-0.03em", margin: "0 0 12px" }}>
+              Start with one drag point. Make it useful fast.
+            </h2>
+            <p style={{ margin: 0, color: "var(--muted)", fontSize: 17, lineHeight: 1.8 }}>
+              You do not need a giant AI transformation project. You need one
+              part of the week to stop bouncing back to you.
+            </p>
+          </div>
+          <div style={{ display: "grid", gap: 12 }}>
+            {process.map(([number, title, body], index) => (
+              <div
+                key={title}
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "86px 1fr",
+                  gap: 18,
+                  padding: "18px 0",
+                  borderTop: "1px solid rgba(255,241,219,0.08)",
+                  opacity: index === 0 ? 1 : 0.98,
+                }}
+              >
+                <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", color: "var(--accent)", paddingTop: 4 }}>
+                  {number}
+                </div>
+                <div>
+                  <h3 style={{ fontSize: 24, lineHeight: 1.12, margin: "0 0 8px" }}>{title}</h3>
+                  <p style={{ margin: 0, fontSize: 15, lineHeight: 1.8, color: "var(--muted)" }}>
+                    {body}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section style={{ maxWidth: 1120, margin: "0 auto", padding: "4px 24px 34px" }}>
         <div
           style={{
             display: "grid",
@@ -522,10 +374,10 @@ export default function Home() {
             <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--accent)", marginBottom: 12 }}>
               Best fit
             </div>
-            <div style={{ display: "grid", gap: 10, color: "var(--muted)", fontSize: 15, lineHeight: 1.7 }}>
-              <p style={{ margin: 0 }}>Founder-operators carrying too much coordination work themselves.</p>
-              <p style={{ margin: 0 }}>CEOs and presidents with fragmented calendars, noisy inboxes, and weak follow-through systems.</p>
-              <p style={{ margin: 0 }}>Managing partners and fractional executives who need context recovery fast.</p>
+            <div style={{ display: "grid", gap: 10, color: "var(--muted)", fontSize: 15, lineHeight: 1.72 }}>
+              <p style={{ margin: 0 }}>Founders and executives who still carry too much coordination work themselves.</p>
+              <p style={{ margin: 0 }}>Teams with heavy inbox, calendar, meeting, or follow-through load.</p>
+              <p style={{ margin: 0 }}>People who want hands-on help, not another tool to babysit.</p>
             </div>
           </div>
           <div
@@ -539,71 +391,16 @@ export default function Home() {
             <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--accent)", marginBottom: 12 }}>
               Probably not fit
             </div>
-            <div style={{ display: "grid", gap: 10, color: "var(--muted)", fontSize: 15, lineHeight: 1.7 }}>
-              <p style={{ margin: 0 }}>People looking for the cheapest possible AI toy.</p>
-              <p style={{ margin: 0 }}>Teams wanting a broad enterprise software rollout before proving one real workflow.</p>
-              <p style={{ margin: 0 }}>Buyers who mainly want content generation instead of executive operating relief.</p>
+            <div style={{ display: "grid", gap: 10, color: "var(--muted)", fontSize: 15, lineHeight: 1.72 }}>
+              <p style={{ margin: 0 }}>Anyone looking for the cheapest AI tool on the market.</p>
+              <p style={{ margin: 0 }}>Teams trying to automate everything at once.</p>
+              <p style={{ margin: 0 }}>Buyers who mainly want content generation instead of time back and cleaner execution.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section style={{ maxWidth: 760, margin: "0 auto", padding: "46px 24px 18px" }}>
-        <div
-          style={{
-            padding: "28px 30px",
-            borderRadius: 28,
-            background: "rgba(255,248,236,0.03)",
-            border: "1px solid var(--border)",
-          }}
-        >
-          <div
-            style={{
-              fontSize: 12,
-              fontWeight: 700,
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
-              color: "var(--accent)",
-              marginBottom: 14,
-            }}
-          >
-            What the setup looks like
-          </div>
-          <div style={{ color: "var(--muted)", fontSize: 17, lineHeight: 1.8 }}>
-            <p style={{ marginTop: 0 }}>
-              We map your current workflow, install the agent system, connect the
-              right accounts, and tune it around the highest-friction parts of
-              your week first.
-            </p>
-            <p style={{ marginBottom: 0 }}>
-              The goal is not to automate everything. The goal is to remove the
-              specific work that should not require your attention in the first
-              place. Two cables. Power and ethernet. Then we handle the rest.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section style={{ maxWidth: 760, margin: "0 auto", padding: "48px 24px 20px" }}>
-        <h2
-          style={{
-            fontSize: "clamp(34px, 5vw, 56px)",
-            lineHeight: 1,
-            letterSpacing: "-0.03em",
-            margin: "0 0 18px",
-          }}
-        >
-          Not a chatbot.
-          <br />
-          Not another app.
-        </h2>
-        <p style={{ margin: 0, color: "var(--muted)", fontSize: 18, lineHeight: 1.8 }}>
-          A private operating layer for the executive or founder who is tired of
-          carrying too much of the business in their own head.
-        </p>
-      </section>
-
-      <section style={{ maxWidth: 760, margin: "0 auto", padding: "44px 24px 108px", textAlign: "center" }}>
+      <section style={{ maxWidth: 760, margin: "0 auto", padding: "28px 24px 108px", textAlign: "center" }}>
         <div
           style={{
             padding: "38px 28px",
@@ -624,7 +421,7 @@ export default function Home() {
               marginBottom: 14,
             }}
           >
-            Starting point
+            Pricing
           </div>
           <h2
             style={{
@@ -634,20 +431,31 @@ export default function Home() {
               margin: "0 0 14px",
             }}
           >
-            Plans start at $297/mo.
+            Setup starts at $1,500 once.
           </h2>
           <p
             style={{
-              margin: "0 auto 28px",
+              margin: "0 auto 18px",
               maxWidth: 560,
               color: "var(--muted)",
               fontSize: 18,
               lineHeight: 1.7,
             }}
           >
-            Managed monthly pricing covers the machine, the setup, and the support
-            layer behind it. If the problem is real, the next step is the fit call,
-            not another week of research.
+            Ongoing Care is $497/mo. Mac Mini Setup is $2,500 once. We handle
+            the setup and support.
+          </p>
+          <p
+            style={{
+              margin: "0 auto 28px",
+              maxWidth: 560,
+              color: "var(--muted-2)",
+              fontSize: 15,
+              lineHeight: 1.8,
+            }}
+          >
+            If this buys back even a few executive hours each month, the math gets
+            clear quickly.
           </p>
           <div
             style={{
@@ -668,14 +476,14 @@ export default function Home() {
                 fontSize: 15,
                 display: "inline-block",
               }}
-              >
-              Request Assessment
-              </Link>
-              <Link
-                href="/pricing"
-                style={{
-                  border: "1px solid var(--border)",
-                  background: "rgba(255,248,236,0.03)",
+            >
+              Request an Assessment
+            </Link>
+            <Link
+              href="/pricing"
+              style={{
+                border: "1px solid var(--border)",
+                background: "rgba(255,248,236,0.03)",
                 color: "var(--foreground)",
                 padding: "15px 24px",
                 borderRadius: 999,
@@ -683,26 +491,19 @@ export default function Home() {
                 fontSize: 15,
                 display: "inline-block",
               }}
-              >
-              View Pricing
-              </Link>
+            >
+              Review Pricing
+            </Link>
           </div>
         </div>
       </section>
 
       <style>{`
         @media (max-width: 920px) {
-          .hero-grid {
-            grid-template-columns: 1fr !important;
-          }
-        }
-        @media (max-width: 900px) {
-          .proof-grid {
-            grid-template-columns: 1fr !important;
-          }
-        }
-        @media (max-width: 860px) {
-          .fit-grid {
+          .hero-grid,
+          .proof-grid,
+          .fit-grid,
+          .setup-grid {
             grid-template-columns: 1fr !important;
           }
         }
