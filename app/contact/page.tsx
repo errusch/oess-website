@@ -83,7 +83,7 @@ export default function Contact() {
             Contact
           </div>
           <h1 style={{ fontSize: "clamp(42px, 6vw, 70px)", lineHeight: 0.98, letterSpacing: "-0.04em", margin: "0 0 16px", maxWidth: 720 }}>
-            Request a fit assessment.
+            Request a free assessment.
           </h1>
           <p style={{ color: "var(--muted)", fontSize: 19, lineHeight: 1.8, margin: "0 0 18px", maxWidth: 680 }}>
             Tell us what is still landing back on you. If this is a fit, we will
