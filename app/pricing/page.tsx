@@ -61,18 +61,6 @@ export default function Pricing() {
         </h1>
         <p
           style={{
-            margin: "0 0 14px",
-            color: "var(--muted)",
-            fontSize: 20,
-            lineHeight: 1.75,
-            maxWidth: 720,
-          }}
-        >
-          Cloud Setup starts at $1,500. Mac Mini Setup is $2,500. Ongoing Care
-          is $497/mo.
-        </p>
-        <p
-          style={{
             margin: 0,
             color: "var(--muted-2)",
             fontSize: 15,
@@ -259,22 +247,6 @@ export default function Pricing() {
               <span>{item}</span>
             </div>
           ))}
-        </div>
-      </section>
-
-      <section
-        style={{
-          border: "1px solid var(--border)",
-          background: "rgba(255,248,236,0.03)",
-          borderRadius: 24,
-          padding: 24,
-          marginBottom: 34,
-        }}
-      >
-        <div style={{ display: "grid", gap: 10, color: "var(--muted)", fontSize: 16, lineHeight: 1.8 }}>
-          <p style={{ margin: 0 }}>You pay us for setup and ongoing care.</p>
-          <p style={{ margin: 0 }}>If you want local hardware, you buy the Mac Mini directly.</p>
-          <p style={{ margin: 0 }}>There is no hidden platform fee in the middle.</p>
         </div>
       </section>
 
