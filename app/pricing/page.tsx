@@ -227,8 +227,7 @@ export default function Pricing() {
             maxWidth: 720,
           }}
         >
-          This is the monthly support plan for buyers who want us to keep the
-          system sharp after setup instead of letting it drift into neglect.
+          Choose this if you want ongoing support after setup.
         </p>
         <div style={{ display: "grid", gap: 10 }}>
           {ongoingCare.map((item) => (
