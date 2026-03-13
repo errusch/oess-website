@@ -225,7 +225,7 @@ export default function Pricing() {
             maxWidth: 720,
           }}
         >
-          Ongoing Care is for buyers who want the system maintained after setup instead of becoming the person who has to maintain it themselves.
+          Choose this if you want ongoing support after setup.
         </p>
         <div style={{ display: "grid", gap: 10 }}>
           {ongoingCare.map((item) => (
