@@ -9,7 +9,7 @@ export default function About() {
           About OESS
         </div>
         <h1 style={{ fontSize: "clamp(44px, 6vw, 72px)", lineHeight: 0.98, letterSpacing: "-0.04em", margin: "0 0 18px" }}>
-          I built this because I got tired of being the backup system.
+          I built this because I wanted a real AI Chief of Staff.
         </h1>
         <p style={{ fontSize: 20, color: "var(--muted)", lineHeight: 1.8, margin: 0, maxWidth: 720 }}>
           The work under the work kept coming back to me: inbox cleanup,
@@ -21,20 +21,21 @@ export default function About() {
       <div style={{ display: "grid", gap: 18, marginBottom: 36, color: "var(--muted)", fontSize: 17, lineHeight: 1.9 }}>
         <p style={{ margin: 0 }}>
           I spent years across IT, systems, process improvement, support, and
-          operations. Eventually I stopped pretending I was going to get more
-          organized by force of will and built a system instead.
+          operations. After a while it got obvious that more discipline was not
+          going to fix the problem. I needed a system that could carry some of
+          the load with me.
         </p>
         <p style={{ margin: 0 }}>
-          The version I use for myself reads inbox context before I do, prepares
-          me for meetings, pulls research when something needs a decision, and
-          keeps follow-through from disappearing. It is not magic. It is useful
-          in the places leaders quietly lose time every week.
+          My AI Chief of Staff reads inbox context before I do, prepares me for
+          meetings, pulls research when a decision needs context, and keeps
+          follow-through from slipping. It helps in the places leaders quietly
+          lose time every week.
         </p>
         <p style={{ margin: 0 }}>
           OESS exists for founders and executives who want that relief without
           spending months building it themselves. We install the system in your
-          environment, adapt it to the way you work, and stay close until it is
-          useful in real conditions.
+          environment, adapt it to the way you work, and stay with you until it
+          proves itself in day-to-day work.
         </p>
         <p style={{ margin: 0 }}>
           This is a founder-run service, not a SaaS company pretending to be
@@ -48,7 +49,7 @@ export default function About() {
           ["What we believe", "Your best hours should go to decisions, momentum, and real conversations. Not inbox cleanup and coordination drag."],
           ["What OESS is", "A hands-on service that installs your AI Chief of Staff around the way you already work."],
           ["What OESS is not", "Not another dashboard. Not a generic chatbot. Not a fantasy about AI running your company without your judgment."],
-          ["Why trust us with it", "We know both sides of the problem: how to build the system and how to make it hold up under real operating mess."],
+          ["Why trust us with it", "We know both sides of the problem: how to build the system and how to make it useful in the middle of a real operating week."],
         ].map(([title, copy]) => (
           <div key={title} style={{ border: "1px solid var(--border)", background: "var(--surface)", borderRadius: 24, padding: 24 }}>
             <h2 style={{ fontSize: 28, lineHeight: 1.02, letterSpacing: "-0.03em", margin: "0 0 10px" }}>{title}</h2>
