@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
+import { DM_Sans, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -9,10 +9,16 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
 });
 
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-serif",
+  subsets: ["latin"],
+  weight: "400",
+});
+
 export const metadata: Metadata = {
-  title: "OESS - Managed AI Executive Operating System",
+  title: "OESS | Your Private AI Chief of Staff",
   description:
-    "OESS installs and runs a private AI executive operating system for founders and executives. Daily briefings, follow-up coverage, meeting prep, and overnight execution in your environment.",
+    "We set up your private AI Chief of Staff so email, meeting prep, research, and follow-through stop eating the best hours of your week.",
 };
 
 export default function RootLayout({
@@ -23,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dmSans.variable}`}
+        className={`${dmSans.variable} ${instrumentSerif.variable}`}
         style={{ background: "#0f0d0a", color: "#f4efe6", margin: 0 }}
       >
         <Nav />
