@@ -113,7 +113,7 @@ export default function Home() {
                   display: "inline-block",
                 }}
               >
-                Request an Assessment
+                Request a Free Assessment
               </Link>
               <Link
                 href="/pricing"
@@ -409,6 +409,25 @@ export default function Home() {
           >
             The Bottom Line
           </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              gap: 10,
+              flexWrap: "wrap",
+              marginBottom: 16,
+              color: "var(--muted-2)",
+              fontSize: 12,
+              letterSpacing: "0.08em",
+              textTransform: "uppercase",
+            }}
+          >
+            <span>Home</span>
+            <span>/</span>
+            <span style={{ color: "var(--foreground)" }}>Free Assessment</span>
+            <span>/</span>
+            <span>Pricing and Booking</span>
+          </div>
           <h2
             style={{
               fontSize: "clamp(32px, 4vw, 52px)",
@@ -417,7 +436,7 @@ export default function Home() {
               margin: "0 0 14px",
             }}
           >
-            If this sounds like the kind of help you actually want, start with pricing.
+            If this sounds like the kind of help you actually want, start with the free assessment.
           </h2>
           <p
             style={{
@@ -428,8 +447,8 @@ export default function Home() {
               lineHeight: 1.7,
             }}
           >
-            The pricing page shows what setup looks like, what you own, and how
-            we structure the work.
+            Tell us what still keeps landing back on you. We will tell you if
+            this is a fit and where we would start.
           </p>
           <p
             style={{
@@ -440,8 +459,9 @@ export default function Home() {
               lineHeight: 1.8,
             }}
           >
-            If it feels like a fit after that, request an assessment and we will
-            tell you what we would recommend.
+            If you want the numbers first, you can review pricing. If you are
+            ready to talk it through, request the assessment and we will take it
+            from there.
           </p>
           <div
             style={{
@@ -463,7 +483,7 @@ export default function Home() {
                 display: "inline-block",
               }}
             >
-              Request an Assessment
+              Request a Free Assessment
             </Link>
             <Link
               href="/pricing"
