@@ -124,7 +124,7 @@ export default function Contact() {
           </h2>
           <p style={{ color: "var(--muted)", fontSize: 16, lineHeight: 1.8, margin: 0 }}>
             We&apos;ll review the fit and reply directly. If you need to reach us
-            immediately, email <a href="mailto:errusch@gmail.com" style={{ color: "var(--accent)" }}>errusch@gmail.com</a>.
+            immediately, email <a href="mailto:eric@oessai.com" style={{ color: "var(--accent)" }}>eric@oessai.com</a>.
           </p>
         </div>
       ) : (
@@ -240,7 +240,7 @@ export default function Contact() {
                   real work off your plate.
                 </p>
                 <p style={{ marginBottom: 0 }}>
-                  Direct email: <a href="mailto:errusch@gmail.com" style={{ color: "var(--accent)" }}>errusch@gmail.com</a>
+                  Direct email: <a href="mailto:eric@oessai.com" style={{ color: "var(--accent)" }}>eric@oessai.com</a>
                 </p>
               </div>
             </div>
