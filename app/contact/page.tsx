@@ -6,6 +6,8 @@ export default function Contact() {
     name: "",
     email: "",
     role: "",
+    companyWebsite: "",
+    currentTools: "",
     message: "",
   });
   const [sent, setSent] = useState(false);
@@ -27,6 +29,8 @@ export default function Contact() {
           name: form.name,
           email: form.email,
           role: form.role,
+          companyWebsite: form.companyWebsite,
+          currentTools: form.currentTools,
           message: form.message,
         }),
       });
@@ -85,11 +89,11 @@ export default function Contact() {
           <h1 style={{ fontSize: "clamp(42px, 6vw, 70px)", lineHeight: 0.98, letterSpacing: "-0.04em", margin: "0 0 16px", maxWidth: 720 }}>
             Request a Free Assessment.
           </h1>
-          <p style={{ color: "var(--muted)", fontSize: 19, lineHeight: 1.8, margin: "0 0 18px", maxWidth: 680 }}>
-            Tell us what keeps landing back on you. We will tell you where we would start and whether the fit is real.
+          <p style={{ color: "var(--muted)", fontSize: 19, lineHeight: 1.8, margin: "0 0 18px", maxWidth: 700 }}>
+            Tell us what keeps landing back on you, how you work today, and where you want help first. We will tell you where we would start and whether the fit is real.
           </p>
-          <p style={{ color: "var(--muted-2)", fontSize: 15, lineHeight: 1.8, margin: 0, maxWidth: 640 }}>
-            A few concrete details are enough.
+          <p style={{ color: "var(--muted-2)", fontSize: 15, lineHeight: 1.8, margin: 0, maxWidth: 660 }}>
+            A few concrete details are enough. We are looking for signal, not a giant brief.
           </p>
         </div>
 
@@ -108,6 +112,7 @@ export default function Contact() {
             <p style={{ margin: 0 }}>The recurring work that keeps bouncing back to you.</p>
             <p style={{ margin: 0 }}>Where the drag shows up most.</p>
             <p style={{ margin: 0 }}>Whether you are leaning cloud or Mac Mini.</p>
+            <p style={{ margin: 0 }}>Your website or current stack if that adds context.</p>
             <p style={{ margin: 0, color: "var(--foreground)", fontWeight: 700 }}>
               If the fit is real, the next step is a short assessment call.
             </p>
@@ -164,13 +169,36 @@ export default function Contact() {
               </div>
             </div>
 
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }} className="contact-form-grid">
+              <div>
+                <label style={labelStyle}>Role</label>
+                <input
+                  type="text"
+                  placeholder="CEO, Founder, President, Partner..."
+                  value={form.role}
+                  onChange={(e) => setForm((f) => ({ ...f, role: e.target.value }))}
+                  style={inputStyle}
+                />
+              </div>
+              <div>
+                <label style={labelStyle}>Company website</label>
+                <input
+                  type="url"
+                  placeholder="https://yourcompany.com"
+                  value={form.companyWebsite}
+                  onChange={(e) => setForm((f) => ({ ...f, companyWebsite: e.target.value }))}
+                  style={inputStyle}
+                />
+              </div>
+            </div>
+
             <div>
-              <label style={labelStyle}>Role</label>
+              <label style={labelStyle}>Current tools or stack</label>
               <input
                 type="text"
-                placeholder="CEO, Founder, President, Partner..."
-                value={form.role}
-                onChange={(e) => setForm((f) => ({ ...f, role: e.target.value }))}
+                placeholder="Google Workspace, Slack, HubSpot, Mac Mini, OpenClaw..."
+                value={form.currentTools}
+                onChange={(e) => setForm((f) => ({ ...f, currentTools: e.target.value }))}
                 style={inputStyle}
               />
             </div>

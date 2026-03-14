@@ -16,6 +16,8 @@ type LeadPayload = {
   name?: unknown;
   email?: unknown;
   role?: unknown;
+  companyWebsite?: unknown;
+  currentTools?: unknown;
   companySize?: unknown;
   startingPoint?: unknown;
   tier?: unknown;
@@ -124,6 +126,8 @@ export async function POST(request: Request) {
       name: normalizeRequired(payload.name, "Name"),
       email: normalizeRequired(payload.email, "Email"),
       role: normalizeOptional(payload.role),
+      companyWebsite: normalizeOptional(payload.companyWebsite),
+      currentTools: normalizeOptional(payload.currentTools),
       companySize: normalizeOptional(payload.companySize),
       startingPoint: normalizeOptional(payload.startingPoint ?? payload.tier),
       bottleneck:

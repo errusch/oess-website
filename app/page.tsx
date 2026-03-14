@@ -2,16 +2,53 @@
 import Link from "next/link";
 
 const process = [
-  ["01", "Choose the bottleneck", "We start with the recurring work that keeps bouncing back to you."],
-  ["02", "Install in your environment", "We set it up in a cloud account or on a Mac Mini you control."],
-  ["03", "Tune it in live use", "We stay close for the first two weeks so it works in real operating conditions."],
+  ["01", "Choose the bottleneck", "We start with the recurring work that keeps bouncing back to you: inbox triage, meeting prep, research, or follow-through."],
+  ["02", "Install in your environment", "We set it up in a cloud account or on a Mac Mini you control, connect the right tools, and keep the first scope tight enough to matter fast."],
+  ["03", "Tune it in live use", "We stay close for the first two weeks so it holds up under real operating conditions instead of dying the first time edge cases show up."],
 ];
 
 const controlPoints = [
   "Cloud account or Mac Mini you control",
   "Your model and app accounts stay yours",
-  "Scoped support access when needed",
   "No hidden platform in the middle",
+  "Two weeks of hands-on support after install",
+];
+
+const useCases = [
+  {
+    title: "Inbox triage",
+    body: "Clean up the daily pile, surface what needs you, and stop low-value replies from eating executive time.",
+  },
+  {
+    title: "Meeting prep",
+    body: "Pull context, notes, loose ends, and talking points together before the meeting starts.",
+  },
+  {
+    title: "Research pulls",
+    body: "Turn open questions into usable briefs instead of another tab graveyard you have to sort later.",
+  },
+  {
+    title: "Follow-through",
+    body: "Catch reminders, drafts, handoffs, and next steps before they quietly bounce back onto your plate.",
+  },
+];
+
+const comparisonRows = [
+  {
+    option: "DIY OpenClaw",
+    fit: "Good if you are technical and want to own every detail.",
+    tradeoff: "You do the setup, debugging, tuning, and upkeep yourself.",
+  },
+  {
+    option: "Shared AI SaaS",
+    fit: "Good if you just want a generic tool fast.",
+    tradeoff: "Less control, weaker fit to your operating style, and more compromise around how the system works.",
+  },
+  {
+    option: "OESS",
+    fit: "Good if you want private control without doing the implementation work yourself.",
+    tradeoff: "Higher-touch, narrower, and intentionally not the cheapest option.",
+  },
 ];
 
 const ctaLabel = "Request a Free Assessment";
@@ -64,20 +101,18 @@ export default function Home() {
                 maxWidth: 760,
               }}
             >
-              Get the recurring work
-              <br />
-              off your plate.
+              Your private AI Chief of Staff.
             </h1>
             <p
               style={{
                 fontSize: "clamp(18px, 2.2vw, 24px)",
                 lineHeight: 1.55,
                 color: "var(--muted)",
-                maxWidth: 660,
+                maxWidth: 680,
                 margin: "0 0 16px",
               }}
             >
-              We install your AI Chief of Staff in your environment so inbox cleanup, meeting prep, research, and follow-through stop consuming the best hours of your week.
+              We install it in your environment so inbox triage, meeting prep, research, and follow-through stop consuming the best hours of your week.
             </p>
             <p
               style={{
@@ -85,10 +120,10 @@ export default function Home() {
                 color: "var(--muted-2)",
                 fontSize: 15,
                 lineHeight: 1.8,
-                maxWidth: 620,
+                maxWidth: 640,
               }}
             >
-              One clear starting point. Your infrastructure, your accounts, your control.
+              This is for buyers who know AI can help, but do not want to spend weeks wiring tools, debugging brittle behavior, and babysitting the system just to get one real operational win.
             </p>
             <div
               style={{
@@ -180,6 +215,11 @@ export default function Home() {
                   "Catches follow-through before it slips",
                   "Drafts, reminders, and admin cleanup stop bouncing back to you by default.",
                 ],
+                [
+                  "Overnight",
+                  "Keeps background work moving",
+                  "Research pulls, prep work, and cleanup continue while you are offline.",
+                ],
               ].map(([time, title, copy], index) => (
                 <div
                   key={title}
@@ -248,7 +288,7 @@ export default function Home() {
                 It runs in your environment, not inside a shared OESS platform.
               </p>
               <p style={{ margin: 0 }}>
-                You keep the hardware and accounts. We handle setup and the first two weeks of support.
+                You keep the hardware and accounts. We handle setup, support, and the messy edge cases that keep most DIY installs from becoming dependable.
               </p>
             </div>
           </div>
@@ -276,6 +316,45 @@ export default function Home() {
       <section style={{ maxWidth: 1120, margin: "0 auto", padding: "2px 24px 34px" }}>
         <div
           style={{
+            padding: 28,
+            borderRadius: 28,
+            border: "1px solid var(--border)",
+            background: "rgba(255,248,236,0.03)",
+          }}
+        >
+          <div style={{ maxWidth: 720, marginBottom: 18 }}>
+            <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--accent)", marginBottom: 12 }}>
+              Likely first wins
+            </div>
+            <h2 style={{ fontSize: "clamp(34px, 4.5vw, 54px)", lineHeight: 1.02, letterSpacing: "-0.03em", margin: "0 0 12px" }}>
+              Start with work buyers already recognize.
+            </h2>
+            <p style={{ margin: 0, color: "var(--muted)", fontSize: 17, lineHeight: 1.8 }}>
+              We are not trying to automate your whole company on day one. We start with the recurring work that makes the value obvious fast.
+            </p>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }} className="use-case-grid">
+            {useCases.map((item) => (
+              <div
+                key={item.title}
+                style={{
+                  padding: 22,
+                  borderRadius: 22,
+                  border: "1px solid rgba(255,241,219,0.08)",
+                  background: "var(--surface)",
+                }}
+              >
+                <h3 style={{ fontSize: 22, lineHeight: 1.08, margin: "0 0 10px" }}>{item.title}</h3>
+                <p style={{ margin: 0, color: "var(--muted)", fontSize: 15, lineHeight: 1.75 }}>{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section style={{ maxWidth: 1120, margin: "0 auto", padding: "2px 24px 34px" }}>
+        <div
+          style={{
             display: "grid",
             gridTemplateColumns: "0.8fr 1.2fr",
             gap: 28,
@@ -291,7 +370,7 @@ export default function Home() {
               Start narrow. Make it useful fast.
             </h2>
             <p style={{ margin: 0, color: "var(--muted)", fontSize: 17, lineHeight: 1.8 }}>
-              We remove one recurring executive drag point first.
+              We remove one recurring executive drag point first, then tighten it in live use.
             </p>
           </div>
           <div style={{ display: "grid", gap: 12 }}>
@@ -344,7 +423,7 @@ export default function Home() {
             </div>
             <div style={{ display: "grid", gap: 10, color: "var(--muted)", fontSize: 15, lineHeight: 1.72 }}>
               <p style={{ margin: 0 }}>Founders and executives carrying too much coordination work themselves.</p>
-              <p style={{ margin: 0 }}>Teams with heavy inbox, calendar, meeting, or follow-through load.</p>
+              <p style={{ margin: 0 }}>Teams with heavy inbox, calendar, meeting, research, or follow-through load.</p>
               <p style={{ margin: 0 }}>Buyers who want hands-on implementation, not another tool to manage.</p>
             </div>
           </div>
@@ -362,8 +441,50 @@ export default function Home() {
             <div style={{ display: "grid", gap: 10, color: "var(--muted)", fontSize: 15, lineHeight: 1.72 }}>
               <p style={{ margin: 0 }}>Anyone looking for the cheapest AI tool on the market.</p>
               <p style={{ margin: 0 }}>Teams trying to automate everything at once.</p>
-              <p style={{ margin: 0 }}>Buyers who mainly want content generation instead of time back and cleaner execution.</p>
+              <p style={{ margin: 0 }}>Buyers who mainly want generic content generation instead of time back and cleaner execution.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ maxWidth: 1120, margin: "0 auto", padding: "4px 24px 34px" }}>
+        <div
+          style={{
+            border: "1px solid var(--border)",
+            background: "linear-gradient(180deg, rgba(255,248,236,0.06), rgba(255,248,236,0.02))",
+            borderRadius: 28,
+            padding: 28,
+          }}
+        >
+          <div style={{ maxWidth: 760, marginBottom: 18 }}>
+            <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--accent)", marginBottom: 12 }}>
+              Why not just do this yourself?
+            </div>
+            <h2 style={{ fontSize: "clamp(32px, 4vw, 48px)", lineHeight: 1.02, letterSpacing: "-0.03em", margin: "0 0 12px" }}>
+              Because the hard part starts after install.
+            </h2>
+            <p style={{ margin: 0, color: "var(--muted)", fontSize: 17, lineHeight: 1.8 }}>
+              Most buyers do not need help buying another AI tool. They need help getting a private system actually working in their environment, surviving edge cases, and becoming dependable enough to trust with real operating work.
+            </p>
+          </div>
+          <div style={{ display: "grid", gap: 12 }}>
+            {comparisonRows.map((row) => (
+              <div
+                key={row.option}
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "minmax(180px, 0.7fr) 1fr 1fr",
+                  gap: 16,
+                  padding: "18px 0",
+                  borderTop: "1px solid rgba(255,241,219,0.08)",
+                }}
+                className="compare-row"
+              >
+                <div style={{ fontSize: 20, fontWeight: 600 }}>{row.option}</div>
+                <div style={{ color: "var(--muted)", fontSize: 15, lineHeight: 1.75 }}>{row.fit}</div>
+                <div style={{ color: "var(--muted-2)", fontSize: 15, lineHeight: 1.75 }}>{row.tradeoff}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -458,7 +579,9 @@ export default function Home() {
           .hero-grid,
           .proof-grid,
           .fit-grid,
-          .setup-grid {
+          .setup-grid,
+          .use-case-grid,
+          .compare-row {
             grid-template-columns: 1fr !important;
           }
         }
