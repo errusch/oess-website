@@ -77,7 +77,7 @@ export default function FAQ() {
           Questions before you buy.
         </h1>
         <p style={{ color: "var(--muted)", fontSize: 19, lineHeight: 1.8, margin: 0 }}>
-          If your question is not here, email us directly. We will answer it plainly.
+          If your question is not here, request a free assessment and tell us what you want covered.
         </p>
       </div>
 
