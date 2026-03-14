@@ -29,14 +29,14 @@ export default function Security() {
         </div>
         <div style={{ padding: 24, background: "var(--surface)", border: "1px solid var(--border)", borderRadius: 24 }}>
           <div style={{ fontSize: 12, fontWeight: 700, color: "var(--accent)", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 12 }}>
-            How support access works
+            If you need our help later
           </div>
           <div style={{ color: "var(--muted)", fontSize: 15, lineHeight: 1.8 }}>
             <p style={{ marginTop: 0 }}>
-              This does not run inside a shared OESS platform.
+              You stay in control of the account and setup.
             </p>
             <p style={{ marginBottom: 0 }}>
-              If support needs access, it should be explicit, limited, and easy to remove when the job is done.
+              If something needs troubleshooting, you can grant access for that work and remove it when we are done.
             </p>
           </div>
         </div>
@@ -44,10 +44,10 @@ export default function Security() {
 
       <div style={{ border: "1px solid var(--border)", background: "var(--surface)", borderRadius: 28, padding: 28 }}>
         <div style={{ fontSize: 12, fontWeight: 700, color: "var(--accent)", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 12 }}>
-          Before you buy
+          Need a deeper answer?
         </div>
         <p style={{ fontSize: 16, color: "var(--muted)", margin: "0 0 18px", lineHeight: 1.8, maxWidth: 720 }}>
-          If you want to talk through privacy, access, deployment model, or where support begins and ends, request a free assessment and tell us what you want covered.
+          If security is the deciding factor, request a free assessment and tell us what you want covered. We will answer it directly.
         </p>
         <Link
           href="/contact"
