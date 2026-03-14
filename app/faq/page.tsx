@@ -82,11 +82,10 @@ export default function FAQ() {
       <div style={{ maxWidth: 720, marginBottom: 34 }}>
         <div style={{ fontSize: 12, fontWeight: 700, color: "var(--accent)", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 16 }}>FAQ</div>
         <h1 style={{ fontSize: "clamp(42px, 6vw, 70px)", lineHeight: 0.98, letterSpacing: "-0.04em", margin: "0 0 16px" }}>
-          Questions you should ask before you buy.
+          Questions before you buy.
         </h1>
         <p style={{ color: "var(--muted)", fontSize: 19, lineHeight: 1.8, margin: 0 }}>
-          If your question is not here, email us directly. We will answer it
-          without the canned sales routine.
+          If your question is not here, request a free assessment and tell us what you want covered.
         </p>
       </div>
 
@@ -141,7 +140,7 @@ export default function FAQ() {
             display: "inline-block",
           }}
         >
-          Request an Assessment
+          Request a Free Assessment
         </Link>
       </section>
     </div>

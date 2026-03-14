@@ -2,9 +2,9 @@
 import Link from "next/link";
 
 const process = [
-  ["01", "Map the drag", "We start with the part of your week that keeps coming back to you: inbox, meeting prep, follow-through, research, or scheduling."],
-  ["02", "Install it in your environment", "We set it up in a cloud account or on a Mac Mini you own, connect the right tools, and keep the scope tight enough to matter fast."],
-  ["03", "Stay close until it is useful", "We watch the first two weeks closely, fix edge cases, and tune the system around real work so you are not left alone after setup."],
+  ["01", "Map the drag", "We start with the part of your week that keeps coming back to you."],
+  ["02", "Install it in your environment", "We set it up in a cloud account or on a Mac Mini you own."],
+  ["03", "Stay close until it is useful", "We stay close for the first two weeks so it keeps working in real conditions."],
 ];
 
 const controlPoints = [
@@ -80,18 +80,6 @@ export default function Home() {
               We install your AI Chief of Staff in your environment so inbox
               cleanup, meeting prep, research, and follow-through stop eating
               the best hours of your week.
-            </p>
-            <p
-              style={{
-                margin: "0 0 28px",
-                color: "var(--muted-2)",
-                fontSize: 15,
-                lineHeight: 1.8,
-                maxWidth: 620,
-              }}
-            >
-              We handle setup, support, and the messy edge cases that keep most
-              people from ever getting this working.
             </p>
             <div
               style={{
@@ -340,52 +328,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section style={{ maxWidth: 1120, margin: "0 auto", padding: "4px 24px 34px" }}>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: 18,
-          }}
-          className="fit-grid"
-        >
-          <div
-            style={{
-              padding: 26,
-              borderRadius: 24,
-              border: "1px solid var(--border)",
-              background: "var(--surface)",
-            }}
-          >
-            <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--accent)", marginBottom: 12 }}>
-              Best fit
-            </div>
-            <div style={{ display: "grid", gap: 10, color: "var(--muted)", fontSize: 15, lineHeight: 1.72 }}>
-              <p style={{ margin: 0 }}>Founders and executives who still carry too much coordination work themselves.</p>
-              <p style={{ margin: 0 }}>Teams with heavy inbox, calendar, meeting, or follow-through load.</p>
-              <p style={{ margin: 0 }}>People who want hands-on help, not another tool to babysit.</p>
-            </div>
-          </div>
-          <div
-            style={{
-              padding: 26,
-              borderRadius: 24,
-              border: "1px solid var(--border)",
-              background: "var(--surface)",
-            }}
-          >
-            <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--accent)", marginBottom: 12 }}>
-              Probably not fit
-            </div>
-            <div style={{ display: "grid", gap: 10, color: "var(--muted)", fontSize: 15, lineHeight: 1.72 }}>
-              <p style={{ margin: 0 }}>Anyone looking for the cheapest AI tool on the market.</p>
-              <p style={{ margin: 0 }}>Teams trying to automate everything at once.</p>
-              <p style={{ margin: 0 }}>Buyers who mainly want content generation instead of time back and cleaner execution.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section style={{ maxWidth: 760, margin: "0 auto", padding: "28px 24px 108px", textAlign: "center" }}>
         <div
           style={{
@@ -476,7 +418,6 @@ export default function Home() {
         @media (max-width: 920px) {
           .hero-grid,
           .proof-grid,
-          .fit-grid,
           .setup-grid {
             grid-template-columns: 1fr !important;
           }
