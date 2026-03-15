@@ -4,7 +4,7 @@ import Link from "next/link";
 const setupOptions = [
   {
     name: "Private Cloud Setup",
-    price: "$1,500",
+    price: "$1,497",
     description:
       "We install your AI Chief of Staff in a cloud account you own and focus the first pass on the highest-friction part of your week.",
     bullets: [
@@ -15,7 +15,7 @@ const setupOptions = [
   },
   {
     name: "Mac Mini Setup",
-    price: "$2,500",
+    price: "$2,497",
     description:
       "We set it up on hardware you physically control. You buy the Mac Mini directly and we handle setup and the first live tuning pass.",
     bullets: [
