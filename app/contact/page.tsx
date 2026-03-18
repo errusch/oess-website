@@ -218,7 +218,7 @@ export default function Contact() {
               <textarea
                 required
                 rows={7}
-                placeholder="Tell us what keeps landing back on you. If you already know you want cloud or Mac Mini, include that too."
+                placeholder="Tell us what keeps landing back on you. If you already know which workflow you want to start with, include that."
                 value={form.message}
                 onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
                 style={{ ...inputStyle, resize: "vertical", minHeight: 160 }}

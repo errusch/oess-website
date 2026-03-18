@@ -13,11 +13,11 @@ const faqs = [
   },
   {
     q: "What does setup look like?",
-    a: "We start with one meaningful bottleneck, install the system in a cloud account or on a Mac Mini you own, and keep the first scope tight.",
+    a: "We start with one meaningful bottleneck, configure a Mac Mini you own with your accounts and workflows, and keep the first scope tight.",
   },
   {
     q: "Who owns the machine and accounts?",
-    a: "You do. You own the cloud account or Mac Mini, and the model and integration accounts stay in your name.",
+    a: "You do. You own the Mac Mini, and the model and integration accounts stay in your name. Nothing is hosted on an OESS platform.",
   },
   {
     q: "Can I use my own AI models?",
@@ -131,7 +131,7 @@ export default function FAQ() {
             display: "inline-block",
           }}
         >
-          Request a Free Assessment
+          Book a 30-min diagnostic
         </Link>
       </section>
     </div>

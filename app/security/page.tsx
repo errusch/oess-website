@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 const controlItems = [
-  "Cloud account or Mac Mini you control",
+  "Mac Mini you own — hardware stays on your desk",
   "Model and integration accounts in your name",
   "No OESS platform sitting between you and the system",
   "Access can stay narrow, explicit, and removable",
@@ -37,7 +37,7 @@ export default function Security() {
           A simpler control model.
         </h1>
         <p style={{ fontSize: 20, color: "var(--muted)", lineHeight: 1.8, maxWidth: 760, margin: 0 }}>
-          We install the system in infrastructure you control. You keep the accounts, the hardware, and the decision rights. That is the point.
+          We install the system on a Mac Mini you own. You keep the accounts, the hardware, and the decision rights. That is the point.
         </p>
       </div>
 
@@ -86,7 +86,7 @@ export default function Security() {
             fontWeight: 700,
           }}
         >
-          Request a Free Assessment
+          Book a 30-min diagnostic
         </Link>
       </div>
 
