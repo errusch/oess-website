@@ -15,6 +15,7 @@ const MAX_FIELD_LENGTH = 2000;
 type LeadPayload = {
   name?: unknown;
   email?: unknown;
+  phone?: unknown;
   role?: unknown;
   companyWebsite?: unknown;
   currentTools?: unknown;
@@ -125,6 +126,7 @@ export async function POST(request: Request) {
       submittedAt: new Date().toISOString(),
       name: normalizeRequired(payload.name, "Name"),
       email: normalizeRequired(payload.email, "Email"),
+      phone: normalizeOptional(payload.phone),
       role: normalizeOptional(payload.role),
       companyWebsite: normalizeOptional(payload.companyWebsite),
       currentTools: normalizeOptional(payload.currentTools),

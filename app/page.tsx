@@ -3,14 +3,14 @@ import Link from "next/link";
 
 const process = [
   ["01", "Choose the bottleneck", "We start with the recurring work that keeps bouncing back to you."],
-  ["02", "Install in your environment", "We set it up in a cloud account or on a Mac Mini you control."],
+  ["02", "Set up your Mac Mini", "We configure it with your accounts, models, and workflows — shipped ready to plug in."],
   ["03", "Tune it in live use", "We stay close for the first two weeks so it keeps working in real conditions."],
 ];
 
 const controlPoints = [
-  "Cloud account or Mac Mini you control",
+  "Mac Mini you own — nothing leaves your desk",
   "Your model and app accounts stay yours",
-  "No hidden platform in the middle",
+  "No shared platform, no SaaS middleman",
   "Two weeks of hands-on support after install",
 ];
 
@@ -51,7 +51,7 @@ const comparisonRows = [
   },
 ];
 
-const ctaLabel = "Request a Free Assessment";
+const ctaLabel = "Book a 30-min diagnostic";
 
 export default function Home() {
   return (
@@ -101,7 +101,7 @@ export default function Home() {
                 maxWidth: 760,
               }}
             >
-              Your private AI Chief of Staff.
+              An AI chief of staff, installed on a Mac Mini you own.
             </h1>
             <p
               style={{
@@ -112,7 +112,7 @@ export default function Home() {
                 margin: "0 0 16px",
               }}
             >
-              We install it in your environment so inbox triage, meeting prep, research, and follow-through stop consuming the best hours of your week.
+              We set up private executive workflows — triage, prep, follow-through — on hardware you control. Week one, you see real outputs. Not promises.
             </p>
             <div
               style={{
@@ -186,50 +186,35 @@ export default function Home() {
                   marginBottom: 18,
                 }}
               >
-                One concrete example
+                What you get in week one
               </div>
               {[
                 [
-                  "6:30 AM",
-                  "Builds your decision brief",
-                  "The day starts with priorities, risks, and the few items that actually need you.",
+                  "Morning briefing",
+                  "Priorities, risks, and the few items that actually need you — ready before your first call.",
                 ],
                 [
-                  "Before first meeting",
-                  "Pulls the missing context together",
-                  "Relevant notes, loose ends, and talking points are waiting before the meeting starts.",
+                  "Meeting prep packet",
+                  "Context, notes, loose ends, and talking points pulled together before the meeting starts.",
                 ],
                 [
-                  "During the day",
-                  "Catches follow-through before it slips",
-                  "Drafts, reminders, and admin cleanup stop bouncing back to you by default.",
+                  "Inbox triage summary",
+                  "Low-value replies drafted, high-value threads surfaced, noise cleared out.",
                 ],
                 [
-                  "Overnight",
-                  "Keeps background work moving",
-                  "Research pulls, prep work, and cleanup continue while you are offline.",
+                  "Follow-through tracker",
+                  "Reminders, drafts, and handoffs caught before they bounce back onto your plate.",
                 ],
-              ].map(([time, title, copy], index) => (
+              ].map(([title, copy], index) => (
                 <div
                   key={title}
                   style={{
-                    padding: "18px 0",
+                    padding: "16px 0",
                     borderTop: "1px solid rgba(255,241,219,0.08)",
                     opacity: index === 0 ? 1 : 0.96,
                   }}
                 >
-                  <div
-                    style={{
-                      fontSize: 12,
-                      fontWeight: 700,
-                      letterSpacing: "0.08em",
-                      color: "var(--accent)",
-                      marginBottom: 8,
-                    }}
-                  >
-                    {time}
-                  </div>
-                  <div style={{ fontSize: 20, fontWeight: 500, marginBottom: 6 }}>
+                  <div style={{ fontSize: 18, fontWeight: 600, marginBottom: 4 }}>
                     {title}
                   </div>
                   <p
@@ -244,6 +229,20 @@ export default function Home() {
                   </p>
                 </div>
               ))}
+              <div
+                style={{
+                  marginTop: 16,
+                  padding: "12px 16px",
+                  borderRadius: 12,
+                  background: "rgba(210,170,109,0.08)",
+                  border: "1px solid rgba(210,170,109,0.15)",
+                  fontSize: 13,
+                  color: "var(--muted)",
+                  lineHeight: 1.6,
+                }}
+              >
+                These are real deliverables you can inspect on day five — not screenshots of a dashboard.
+              </div>
             </div>
           </div>
         </div>
@@ -274,7 +273,7 @@ export default function Home() {
             </h2>
             <div style={{ display: "grid", gap: 12, color: "var(--muted)", fontSize: 16, lineHeight: 1.8 }}>
               <p style={{ margin: 0 }}>
-                It runs in your environment, not inside a shared OESS platform.
+                It runs on a Mac Mini you own — not inside a shared OESS platform.
               </p>
               <p style={{ margin: 0 }}>
                 You keep the hardware and accounts. We handle setup and support.
@@ -463,7 +462,7 @@ export default function Home() {
               margin: "0 0 14px",
             }}
           >
-            Start with a free assessment.
+            Find out which workflow is leaking your time.
           </h2>
           <p
             style={{
@@ -474,7 +473,7 @@ export default function Home() {
               lineHeight: 1.7,
             }}
           >
-            Tell us what keeps landing back on you. We will tell you if the fit is real and where we would begin.
+            30 minutes. We map the bottleneck, show you what week one looks like, and tell you honestly if the fit is real.
           </p>
           <div
             style={{

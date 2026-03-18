@@ -5,10 +5,12 @@ export default function Contact() {
   const [form, setForm] = useState({
     name: "",
     email: "",
+    phone: "",
     role: "",
     companyWebsite: "",
     currentTools: "",
     message: "",
+    website: "", // honeypot field
   });
   const [sent, setSent] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -19,6 +21,13 @@ export default function Contact() {
     setSubmitting(true);
     setError(null);
 
+    // Honeypot check - if website field is filled, it's likely a bot
+    if (form.website) {
+      setSubmitting(false);
+      setSent(true);
+      return;
+    }
+
     try {
       const response = await fetch("/api/leads", {
         method: "POST",
@@ -28,6 +37,7 @@ export default function Contact() {
         body: JSON.stringify({
           name: form.name,
           email: form.email,
+          phone: form.phone,
           role: form.role,
           companyWebsite: form.companyWebsite,
           currentTools: form.currentTools,
@@ -110,7 +120,7 @@ export default function Contact() {
           >
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }} className="contact-form-grid">
               <div>
-                <label style={labelStyle}>Name</label>
+                <label style={labelStyle}>Name *</label>
                 <input
                   required
                   type="text"
@@ -121,7 +131,7 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label style={labelStyle}>Email</label>
+                <label style={labelStyle}>Email *</label>
                 <input
                   required
                   type="email"
@@ -135,6 +145,16 @@ export default function Contact() {
 
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }} className="contact-form-grid">
               <div>
+                <label style={labelStyle}>Phone</label>
+                <input
+                  type="tel"
+                  placeholder="(555) 123-4567"
+                  value={form.phone}
+                  onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
+                  style={inputStyle}
+                />
+              </div>
+              <div>
                 <label style={labelStyle}>Role</label>
                 <input
                   type="text"
@@ -144,6 +164,22 @@ export default function Contact() {
                   style={inputStyle}
                 />
               </div>
+            </div>
+
+            {/* Honeypot field - hidden from humans */}
+            <div style={{ position: "absolute", left: "-9999px", opacity: 0 }}>
+              <label htmlFor="website">Website</label>
+              <input
+                id="website"
+                type="text"
+                tabIndex={-1}
+                autoComplete="off"
+                value={form.website}
+                onChange={(e) => setForm((f) => ({ ...f, website: e.target.value }))}
+              />
+            </div>
+
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }} className="contact-form-grid">
               <div>
                 <label style={labelStyle}>Company website</label>
                 <input
@@ -151,6 +187,16 @@ export default function Contact() {
                   placeholder="https://yourcompany.com"
                   value={form.companyWebsite}
                   onChange={(e) => setForm((f) => ({ ...f, companyWebsite: e.target.value }))}
+                  style={inputStyle}
+                />
+              </div>
+              <div>
+                <label style={labelStyle}>Current tools or stack</label>
+                <input
+                  type="text"
+                  placeholder="Google Workspace, Slack, HubSpot, Mac Mini, OpenClaw..."
+                  value={form.currentTools}
+                  onChange={(e) => setForm((f) => ({ ...f, currentTools: e.target.value }))}
                   style={inputStyle}
                 />
               </div>
