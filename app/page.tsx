@@ -3,12 +3,12 @@ import Link from "next/link";
 
 const process = [
   ["01", "Map the drag", "We start with the part of your week that keeps coming back to you."],
-  ["02", "Install it in your environment", "We set it up in a cloud account or on a Mac Mini you own."],
+  ["02", "Install it in your environment", "We set it up on a Mac Mini you own."],
   ["03", "Stay close until it is useful", "We stay close for the first two weeks so it keeps working in real conditions."],
 ];
 
 const controlPoints = [
-  "Runs in a cloud account or on a Mac Mini you own",
+  "Runs on a Mac Mini you own",
   "Your model and app accounts stay yours",
   "Two weeks of hands-on support after setup",
   "No hidden platform in the middle",

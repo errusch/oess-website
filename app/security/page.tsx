@@ -11,8 +11,8 @@ export default function Security() {
           You should not have to hand your business to another platform.
         </h1>
         <p style={{ fontSize: 20, color: "var(--muted)", lineHeight: 1.8, maxWidth: 720, margin: 0 }}>
-          We install the system in a cloud account you own or on a Mac Mini you
-          control. You keep the hardware, the accounts, and the decision rights.
+          We install the system on a Mac Mini you own. You keep the hardware,
+          the accounts, and the decision rights.
         </p>
       </div>
 
@@ -22,7 +22,7 @@ export default function Security() {
             What you control
           </div>
           <div style={{ color: "var(--muted)", lineHeight: 1.8, fontSize: 15, display: "grid", gap: 10 }}>
-            <p style={{ margin: 0 }}>Cloud account or Mac Mini you control</p>
+            <p style={{ margin: 0 }}>Mac Mini you own and control</p>
             <p style={{ margin: 0 }}>Model and integration accounts in your name</p>
             <p style={{ margin: 0 }}>No platform fee sitting between you and your system</p>
           </div>
