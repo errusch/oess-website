@@ -13,11 +13,11 @@ const faqs = [
   },
   {
     q: "What does setup look like?",
-    a: "We start with the single biggest drag on your week, install the system in a cloud account or on a Mac Mini you own, and keep the first scope tight enough to matter quickly. Most buyers should see something useful within a few days, then we stay close for the first two weeks to tune it around real work.",
+    a: "We start with the single biggest drag on your week, install the system on a Mac Mini you own, and keep the first scope tight enough to matter quickly. Most buyers should see something useful within a few days, then we stay close for the first two weeks to tune it around real work.",
   },
   {
     q: "Who owns the machine and accounts?",
-    a: "You do. You own the cloud account or Mac Mini, and the model and integration accounts stay in your name. We handle setup and support, but the control model stays with you.",
+    a: "You do. You own the Mac Mini, and the model and integration accounts stay in your name. OESS sets it up for you, but it stays in your environment and under your control.",
   },
   {
     q: "Can I use my own AI models?",

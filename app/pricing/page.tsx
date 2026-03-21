@@ -1,30 +1,18 @@
 "use client";
 import Link from "next/link";
 
-const setupOptions = [
-  {
-    name: "Private Cloud Setup",
-    price: "$1,497",
-    description:
-      "We install your AI Chief of Staff in a cloud account you own and focus the first pass on the highest-friction part of your week.",
-    bullets: [
-      "Cloud account stays in your control",
-      "One clear bottleneck first",
-      "Two weeks of hands-on support after install",
-    ],
-  },
-  {
-    name: "Mac Mini Setup",
-    price: "$2,497",
-    description:
-      "We set it up on hardware you physically control. You buy the Mac Mini directly and we handle setup and the first live tuning pass.",
-    bullets: [
-      "You own the hardware from day one",
-      "Best fit when local control matters most",
-      "Two weeks of hands-on support after install",
-    ],
-  },
-];
+const setupOption = {
+  name: "Mac Mini Setup",
+  price: "$2,497",
+  label: "Private local setup",
+  description:
+    "We set it up on hardware you physically control. You buy the Mac Mini directly and we handle setup and the first live tuning pass.",
+  bullets: [
+    "You own the hardware from day one",
+    "One clear bottleneck first",
+    "Two weeks of hands-on support after install",
+  ],
+};
 
 const ongoingCare = [
   "Monitoring and break-fix support",
@@ -68,100 +56,93 @@ export default function Pricing() {
             maxWidth: 700,
           }}
         >
-          Choose the setup path that fits you, get one meaningful win working
-          first, then decide whether you want ongoing support.
+          Start with one meaningful win on a Mac Mini you own, then decide whether you want ongoing support after the system is working in real use.
         </p>
       </section>
 
       <section style={{ display: "grid", gap: 22, marginBottom: 28 }}>
-        {setupOptions.map((offer, index) => (
-          <article
-            key={offer.name}
+        <article
+          style={{
+            border: "1px solid rgba(210,170,109,0.42)",
+            background: "linear-gradient(180deg, rgba(210,170,109,0.12), rgba(255,248,236,0.04))",
+            borderRadius: 28,
+            padding: 28,
+          }}
+        >
+          <div
             style={{
-              border: `1px solid ${index === 0 ? "rgba(210,170,109,0.42)" : "var(--border)"}`,
-              background:
-                index === 0
-                  ? "linear-gradient(180deg, rgba(210,170,109,0.12), rgba(255,248,236,0.04))"
-                  : "rgba(255,248,236,0.03)",
-              borderRadius: 28,
-              padding: 28,
+              display: "grid",
+              gridTemplateColumns: "minmax(0, 1fr) auto",
+              gap: 16,
+              alignItems: "start",
+              marginBottom: 14,
             }}
+            className="pricing-topline"
           >
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "minmax(0, 1fr) auto",
-                gap: 16,
-                alignItems: "start",
-                marginBottom: 14,
-              }}
-              className="pricing-topline"
-            >
-              <div>
-                <div
-                  style={{
-                    fontSize: 11,
-                    fontWeight: 700,
-                    letterSpacing: "0.12em",
-                    textTransform: "uppercase",
-                    color: "var(--accent)",
-                    marginBottom: 8,
-                  }}
-                >
-                  {index === 0 ? "Start here" : "Local-hardware option"}
-                </div>
-                <h2
-                  style={{
-                    fontSize: 34,
-                    lineHeight: 1,
-                    letterSpacing: "-0.03em",
-                    margin: 0,
-                  }}
-                >
-                  {offer.name}
-                </h2>
-              </div>
+            <div>
               <div
                 style={{
-                  fontSize: 30,
+                  fontSize: 11,
                   fontWeight: 700,
-                  color: index === 0 ? "var(--accent-strong)" : "var(--foreground)",
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "var(--accent)",
+                  marginBottom: 8,
                 }}
               >
-                {offer.price}
+                {setupOption.label}
               </div>
+              <h2
+                style={{
+                  fontSize: 34,
+                  lineHeight: 1,
+                  letterSpacing: "-0.03em",
+                  margin: 0,
+                }}
+              >
+                {setupOption.name}
+              </h2>
             </div>
-            <p
+            <div
               style={{
-                margin: "0 0 18px",
-                color: "var(--muted)",
-                lineHeight: 1.75,
-                fontSize: 16,
-                maxWidth: 700,
+                fontSize: 30,
+                fontWeight: 700,
+                color: "var(--accent-strong)",
               }}
             >
-              {offer.description}
-            </p>
-            <div style={{ display: "grid", gap: 10 }}>
-              {offer.bullets.map((item) => (
-                <div
-                  key={item}
-                  style={{
-                    display: "flex",
-                    gap: 10,
-                    alignItems: "flex-start",
-                    color: "var(--muted)",
-                    fontSize: 15,
-                    lineHeight: 1.7,
-                  }}
-                >
-                  <span style={{ color: "var(--accent)", fontWeight: 700 }}>•</span>
-                  <span>{item}</span>
-                </div>
-              ))}
+              {setupOption.price}
             </div>
-          </article>
-        ))}
+          </div>
+          <p
+            style={{
+              margin: "0 0 18px",
+              color: "var(--muted)",
+              lineHeight: 1.75,
+              fontSize: 16,
+              maxWidth: 720,
+            }}
+          >
+            {setupOption.description}
+          </p>
+          <div style={{ display: "grid", gap: 10 }}>
+            {setupOption.bullets.map((item) => (
+              <div
+                key={item}
+                style={{
+                  display: "flex",
+                  gap: 10,
+                  alignItems: "flex-start",
+                  color: "var(--muted)",
+                  fontSize: 15,
+                  lineHeight: 1.7,
+                }}
+              >
+                <span style={{ color: "var(--accent)", fontWeight: 700 }}>•</span>
+                <span>{item}</span>
+              </div>
+            ))}
+          </div>
+        </article>
       </section>
 
       <section
