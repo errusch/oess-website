@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: "Who owns the machine and accounts?",
-    a: "You do. You own the Mac Mini, and the model and integration accounts stay in your name. Nothing is hosted on an OESS platform.",
+    a: "You do. You own the Mac Mini, and the model and integration accounts stay in your name. OESS sets it up for you, but it stays in your environment and under your control.",
   },
   {
     q: "Can I use my own AI models?",
